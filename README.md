@@ -2,6 +2,25 @@
 
 Nato come parte del Final Project per il **Full-Time Coding Bootcamp di Edgemony** (CB10/2024), _HireGenius_ ha come obiettivo quello di automatizzare e migliorare il processo di apprendimento e test delle competenze, fornendo un'interfaccia semplice e intuitiva per simulare interviste tecniche, colloqui, selezioni e interrogazioni.
 
+## Demo 📽️
+
+> Ti offriamo un'anteprima delle funzionalità di _HireGenius_.
+> Visita il link qui sotto per scoprire come può rivoluzionare la tua preparazione ai colloqui:
+
+<p align="center">
+  <a href="https://hire-genius.vercel.app" style="text-decoration: none;">
+    <strong>🌟🌟🌟  Inizia il tuo primo colloquio!  🌟🌟🌟</strong>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://hire-genius.vercel.app">
+    <img src="./public/docs-media/subscribe.gif" alt="Prova HireGenius!" />
+  </a>
+</p>
+
+---
+
 <p align="center">
     <img src="public/docs-media/screenshot1.png" alt="Login" width="200"/>
     <img src="public/docs-media/screenshot2.png" alt="Interviewers" width="200"/>
@@ -10,22 +29,22 @@ Nato come parte del Final Project per il **Full-Time Coding Bootcamp di Edgemony
 
 ## Table of Contents
 
-1. [Panoramica](#panoramica)
-   - [Caratteristiche Principali](#caratteristiche-principali)
-   - [Obiettivi](#obiettivi)
-2. [Demo](#demo)
-   - [Utilizzo](#utilizzo)
-3. [Dietro le Quinte](#dietro-le-quinte)
-   - [Stack Tecnologico](#stack-tecnologico)
-   - [Struttura del Progetto](#struttura-del-progetto)
-   - [Prompt Engineering e JSON](#prompt-engineering-e-json)
-   - [Logica di Frontend](#logica-di-frontend)
-4. [Contribuisci](#contribuisci)
-   - [Prerequisiti](#prerequisiti)
-   - [Come Contribuire](#come-contribuire)
-5. [Future Implementazioni](#future-implementazioni)
-6. [Licenza](#licenza)
-7. [Team di Sviluppo E Contatti](#team-di-sviluppo-e-contatti)
+1. [Panoramica](#1-panoramica-)
+   - [Caratteristiche Principali](#caratteristiche-principali-)
+   - [Obiettivi](#obiettivi-)
+2. [Demo](#demo-️)
+   - [Utilizzo](#utilizzo-️)
+3. [Dietro le Quinte](#dietro-le-quinte-)
+   - [Stack Tecnologico](#stack-tecnologico-️)
+   - [Struttura del Progetto](#struttura-del-progetto-)
+   - [Prompt Engineering e JSON](#prompt-engineering-e-json-️)
+   - [Logica di Frontend](#logica-di-frontend-)
+4. [Contribuisci](#contribuisci-)
+   - [Prerequisiti](#prerequisiti-)
+   - [Come Contribuire](#come-contribuire-)
+5. [Future Implementazioni](#future-implementazioni-)
+6. [Licenza](#licenza-)
+7. [Team di Sviluppo E Contatti](#team-di-sviluppo-e-contatti-)
 
 ## 1. Panoramica 🌐
 
@@ -66,20 +85,6 @@ Adottare _HireGenius_ offre numerosi vantaggi che migliorano significativamente 
 > Utilizzare _HireGenius_ significa dotarsi di uno strumento potente e
 > versatile, in grado di trasformare la preparazione ai colloqui in un
 > processo efficace, sicuro e altamente personalizzato.
-
-## Demo 📽️
-
-Per offrirti un'anteprima delle funzionalità di _HireGenius_, abbiamo preparato una demo interattiva. Visita il link qui sotto per esplorare l'applicazione e scoprire come può rivoluzionare la tua preparazione ai colloqui:
-
-### [**Inizia il tuo primo colloquio**](https://hire-genius.vercel.app)
-
-<div>
-  <a href="https://link-alla-demo.com" target="_blank">
-    <a href="https://hire-genius.vercel.app" target="_blank" style="display: inline-block; padding: 15px 25px; font-size: 18px; font-weight: bold; color: white; background-color: #FF1493; border: solid 2px #FFD700; text-align: center; border-radius: 8px; text-decoration: none;">
-  Prova HireGenius!
-    </a>
-  </a>
-  </div>
 
 ### Utilizzo 🛠️
 
