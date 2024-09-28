@@ -73,14 +73,13 @@ Per offrirti un'anteprima delle funzionalità di _HireGenius_, abbiamo preparato
 
 ### [**Inizia il tuo primo colloquio**](https://hire-genius.vercel.app)
 
-> > > > > > ClicK Now
-
-<a href="https://link-alla-demo.com" target="_blank">
-   <a href="https://hire-genius.vercel.app" target="_blank" style="display: inline-block; padding: 15px 25px; font-size: 18px; font-weight: bold; color: white; background-color: #FF1493; border: solid 2px #FFD700; text-align: center; border-radius: 8px; text-decoration: none;">
+<div>
+  <a href="https://link-alla-demo.com" target="_blank">
+    <a href="https://hire-genius.vercel.app" target="_blank" style="display: inline-block; padding: 15px 25px; font-size: 18px; font-weight: bold; color: white; background-color: #FF1493; border: solid 2px #FFD700; text-align: center; border-radius: 8px; text-decoration: none;">
   Prova HireGenius!
-</a>
+    </a>
+  </a>
   </div>
-</a>
 
 ### Utilizzo 🛠️
 
