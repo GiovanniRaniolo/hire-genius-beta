@@ -71,19 +71,13 @@ Adottare _HireGenius_ offre numerosi vantaggi che migliorano significativamente 
 
 Per offrirti un'anteprima delle funzionalità di _HireGenius_, abbiamo preparato una demo interattiva. Visita il link qui sotto per esplorare l'applicazione e scoprire come può rivoluzionare la tua preparazione ai colloqui:
 
-<div>
-
-</div>
-
 ### [**Inizia il tuo primo colloquio**](https://hire-genius.vercel.app)
 
 > > > > > > ClicK Now
 
 <a href="https://link-alla-demo.com" target="_blank">
- 
    <a href="https://hire-genius.vercel.app" target="_blank" style="display: inline-block; padding: 15px 25px; font-size: 18px; font-weight: bold; color: white; background-color: #FF1493; border: solid 2px #FFD700; text-align: center; border-radius: 8px; text-decoration: none;">
-  Prova HireGenius
-
+  Prova HireGenius!
 </a>
   </div>
 </a>
