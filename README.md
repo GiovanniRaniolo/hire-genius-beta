@@ -200,43 +200,45 @@ Il prompt engineering è l'arte di progettare i prompt che vengono forniti ai mo
 
 Negli esempi di codice, gli schemi sono definiti attraverso il costrutto `responseSchema`, che specifica la forma dell'output atteso dal modello. Qui, alcuni dettagli tecnici sugli schemi utilizzati:
 
-```typescript
-//...
+Ecco il codice indented secondo le linee guida di Prettier per una migliore leggibilità:
+
+```javascript
 generationConfig: {
-responseMimeType: "application/json",
-responseSchema: {
-type: SchemaType.OBJECT, // Definisce che l'output è un oggetto JSON
-properties: {
-evaluatedResponses: {
-type: SchemaType.ARRAY,
-items: {
-type: SchemaType.OBJECT,
-properties: {
-q: { type: SchemaType.STRING }, // Una proprietà per la domanda
-a: { type: SchemaType.STRING }, // Una proprietà per la risposta fornita
-correctAnswer: { type: SchemaType.STRING }, // La risposta corretta
-answerStatus: {
-type: SchemaType.STRING,
-enum: ["correct", "incorrect", "average"], // Enum per lo stato della risposta
-},
-answerFeedback: { type: SchemaType.STRING }, // Feedback sulla risposta
-},
-required: ["q", "a", "correctAnswer", "answerStatus", "answerFeedback"], // Proprietà obbligatorie
-},
-},
-globalEvaluation: {
-type: SchemaType.OBJECT,
-properties: {
-feedback: { type: SchemaType.STRING }, // Feedback globale
-points: { type: SchemaType.INTEGER }, // Punti totali
-outOf: { type: SchemaType.INTEGER }, // Massimo punteggio
-},
-required: ["feedback", "points", "outOf"], // Proprietà obbligatorie
-},
-},
-required: ["evaluatedResponses", "globalEvaluation"], // Proprietà obbligatorie per l'output finale
-},
+    responseMimeType: "application/json",
+    responseSchema: {
+        type: SchemaType.OBJECT, // Definisce che l'output è un oggetto JSON
+        properties: {
+            evaluatedResponses: {
+                type: SchemaType.ARRAY,
+                items: {
+                    type: SchemaType.OBJECT,
+                    properties: {
+                        q: { type: SchemaType.STRING }, // Una proprietà per la domanda
+                        a: { type: SchemaType.STRING }, // Una proprietà per la risposta fornita
+                        correctAnswer: { type: SchemaType.STRING }, // La risposta corretta
+                        answerStatus: {
+                            type: SchemaType.STRING,
+                            enum: ["correct", "incorrect", "average"], // Enum per lo stato della risposta
+                        },
+                        answerFeedback: { type: SchemaType.STRING }, // Feedback sulla risposta
+                    },
+                    required: ["q", "a", "correctAnswer", "answerStatus", "answerFeedback"], // Proprietà obbligatorie
+                },
+            },
+            globalEvaluation: {
+                type: SchemaType.OBJECT,
+                properties: {
+                    feedback: { type: SchemaType.STRING }, // Feedback globale
+                    points: { type: SchemaType.INTEGER }, // Punti totali
+                    outOf: { type: SchemaType.INTEGER }, // Massimo punteggio
+                },
+                required: ["feedback", "points", "outOf"], // Proprietà obbligatorie
+            },
+        },
+        required: ["evaluatedResponses", "globalEvaluation"], // Proprietà obbligatorie per l'output finale
+    },
 }
+
 ```
 
 #### Struttura del JSON di Input
@@ -244,18 +246,16 @@ required: ["evaluatedResponses", "globalEvaluation"], // Proprietà obbligatorie
 Quando si inviano richieste al server, i dati vengono formattati in modo coerente. Nella funzione `handler` per l'API, il payload JSON è strutturato come da esempio:
 
 ```json
-//...
 {
-"prompt": "Immagina di essere l'esaminatore ...",
-"quizResponses": [
-{
-"q": "Qual è la capitale della Francia?",
-"a": "Parigi"
-},
-...
-]
+    "prompt": "Immagina di essere l'esaminatore ...",
+    "quizResponses": [
+        {
+            "q": "Qual è la capitale della Francia?",
+            "a": "Parigi"
+        },
+        ...
+    ]
 }
-//...
 ```
 
 Questa struttura aiuta il modello a comprendere il contesto e a generare risposte adeguate.
@@ -373,9 +373,29 @@ Il progetto _HireGenius_ è distribuito sotto licenza MIT. Puoi trovare ulterior
 
 ## Team di Sviluppo e Contatti 👥
 
-- [**Giuseppe Senettone**](https://github.com/giusene) - _Technical Project Manager_
-- [**Bruna Alamia**](https://www.linkedin.com/in/brunaalamia/) - _Developer_
-- [**Chiara Corvitto**](https://github.com/Birdofillome) - _Developer_
-- [**Silvia Melia**](https://github.com/meliasil) - _Developer_
-- [**Giovanni Raniolo**](https://github.com/GiovanniRaniolo) - _Developer_
-- [**Ivan Giuseppe Saltaformaggio**](https://github.com/Nikeandros) - _Developer_
+<p align="center">
+  <a href="https://github.com/giusene" style="text-decoration: none; color: #0366d6;">
+    <strong>Giuseppe Senettone</strong>
+  </a> <small> - technical project manager</small><br> 
+  <a href="https://www.linkedin.com/in/brunaalamia/" style="text-decoration: none; color: #0366d6;">
+    <strong>Bruna Alamia</strong>
+  </a> <small> - developer</small> <br>
+  <a href="https://github.com/Birdofillome" style="text-decoration: none; color: #0366d6;">
+    <strong>Chiara Corvitto</strong>
+  </a> <small> - developer</small> <br> 
+  <a href="https://github.com/meliasil" style="text-decoration: none; color: #0366d6;">
+    <strong>Silvia Melia</strong>
+  </a> <small> - developer</small> <br> 
+  <a href="https://github.com/GiovanniRaniolo" style="text-decoration: none; color: #0366d6;">
+    <strong>Giovanni Raniolo</strong>
+  </a> <small> - developer</small><br> 
+  <a href="https://github.com/Nikeandros" style="text-decoration: none; color: #0366d6;">
+    <strong>Ivan Giuseppe Saltaformaggio</strong>
+  </a> <small> - developer</small> <br>
+</p>
+
+<p align="center">
+  <a href="https://hire-genius.vercel.app">
+    <img src="./public/docs-media/banner.png" alt="Footer Image" width= "100%"; max-width="900px"; border-radius= "5px";>
+  </a>
+</p>
