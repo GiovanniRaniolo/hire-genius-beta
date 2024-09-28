@@ -1,0 +1,58 @@
+.main {
+	@include main;
+	padding: var(--page-padding);
+	@include flex-column(var(--gap-md));
+
+	@media (min-width: 1025px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.container {
+		@include flex-column(var(--gap-lg));
+		padding: 0;
+
+		@media (min-width: 1025px) {
+			flex-direction: row;
+			column-gap: var(--page-padding);
+			align-items: start;
+		}
+	}
+
+	.header {
+		@include header;
+	}
+
+	color: var(--light);
+
+	.userInfo {
+		@include flex(var(--gap-md));
+		justify-content: flex-end;
+		padding-bottom: var(--gap-lg);
+		border-bottom: 1px solid var(--light);
+
+		span {
+			font-weight: var(--fw-regular);
+		}
+	}
+
+	.cardsList {
+		@include flex-column(var(--gap-md));
+		@media (min-width: 1025px) {
+			width: 50%;
+		}
+	}
+
+	.linkBtn {
+		width: 100%;
+
+		@media (min-width: 1025px) {
+			width: unset;
+		}
+
+		button {
+			@include button;
+			width: 100%;
+		}
+	}
+}

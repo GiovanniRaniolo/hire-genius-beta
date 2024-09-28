@@ -1,0 +1,34 @@
+.resultCard {
+	@include base-element;
+	@include flex-column(var(--gap-md));
+	align-items: flex-start;
+	background-color: var(--elements-bg);
+
+	transition: transform 0.8s ease;
+
+	&.selectedResultCard {
+		transform: scale(1.05);
+		margin: var(--gap-lg) 0;
+		border: 4px solid var(--dark);
+	}
+
+	&.correct {
+		background-color: var(--correct-bg);
+	}
+	&.average {
+		background-color: var(--average-bg);
+	}
+	&.incorrect {
+		background-color: var(--incorrect-bg);
+	}
+
+	.resultCardHeader {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	& > :last-child {
+		margin: 0 auto;
+	}
+}

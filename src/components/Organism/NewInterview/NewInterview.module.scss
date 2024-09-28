@@ -1,0 +1,42 @@
+.main {
+	@include main;
+
+	.container {
+		@include flex-column(var(--gap-lg));
+
+		@media (min-width: 1025px) {
+			flex-direction: row;
+			column-gap: var(--page-padding);
+
+			align-items: stretch;
+		}
+
+		.header {
+			@include header;
+
+			.hero {
+				background-color: var(--elements-bg);
+				border-radius: var(--border-radius);
+				overflow: hidden;
+
+				display: flex;
+				align-items: end;
+
+				img {
+					display: block;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+
+		form {
+			@include form;
+
+			@media (min-width: 1025px) {
+				height: 100%;
+				justify-content: space-between;
+			}
+		}
+	}
+}

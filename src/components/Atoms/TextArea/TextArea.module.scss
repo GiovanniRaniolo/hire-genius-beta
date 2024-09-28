@@ -1,0 +1,7 @@
+.textarea {
+	@include base-element;
+	font-size: var(--fs-md);
+	resize: vertical;
+	margin-top: 9px;
+	flex-grow: 1;
+}
