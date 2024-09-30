@@ -1,220 +1,194 @@
 @mixin flex-column($gap) {
-	display: flex;
-	flex-direction: column;
-	row-gap: $gap;
+  display: flex;
+  flex-direction: column;
+  row-gap: $gap;
 }
 
 @mixin flex-center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin flex($gap) {
-	display: flex;
-	align-items: center;
-	column-gap: ($gap);
+  display: flex;
+  align-items: center;
+  column-gap: ($gap);
 }
-
-// @mixin main {
-// 	width: 100vw;
-// 	max-width: 600px;
-// 	margin: 0 auto;
-// 	min-height: 100dvh;
-// 	padding: var(--page-padding);
-// 	@include flex-column(var(--gap-md));
-
-// 	@media (min-width: 1025px) {
-// 		padding-top: calc(100px + var(--page-padding));
-// 		margin: 0 auto;
-// 		max-width: 1300px;
-// 		justify-content: center;
-// 	}
-// }
 
 @mixin main {
-	width: 100vw;
-	max-width: 600px;
-	min-height: 100dvh;
-	margin: 0 auto;
+  width: 100dvw;
+  max-width: 600px;
+  min-height: 100dvh;
+  margin: 0 auto;
 
-	@media (min-width: 1025px) {
-		padding-top: calc(100px + var(--page-padding));
-		max-width: 1300px;
-		@include flex-center;
-	}
+  @media (min-width: 1025px) {
+    padding-top: calc(100px + var(--page-padding));
+    max-width: 1300px;
+    @include flex-center;
+  }
 
-	.container {
-		padding: var(--page-padding);
-		min-height: 100dvh;
+  .container {
+    padding: var(--page-padding);
+    min-height: 100dvh;
 
-		@include flex-column(var(--gap-lg));
+    @include flex-column(var(--gap-lg));
 
-		@media (min-width: 1025px) {
-			display: block;
-			min-height: unset;
+    @media (min-width: 1025px) {
+      display: block;
+      min-height: unset;
 
-			justify-content: space-between;
-			width: 100%;
-			padding: var(--page-padding) 0;
+      justify-content: space-between;
+      width: 100%;
+      padding: var(--page-padding) 0;
 
-			& > div {
-				flex-grow: 1;
-			}
-		}
-	}
+      & > div {
+        flex-grow: 1;
+      }
+    }
+  }
 }
 
-// @mixin header {
-// 	height: 40px;
-// 	@include flex-center;
-
-// 	.sectionTitle {
-// 		text-align: center;
-// 		color: var(--light);
-// 		font-size: var(--fs-md);
-
-// 		@media (min-width: 1025px) {
-// 			font-size: (var(--fs-lg));
-// 		}
-// 	}
-// }
-
 @mixin header {
-	@include flex-column(var(--fs-lg));
+  @include flex-column(var(--fs-lg));
 
-	@media (min-width: 1025px) {
-		justify-content: start;
-	}
+  @media (min-width: 1025px) {
+    justify-content: start;
+  }
 
-	.sectionTitle {
-		height: 40px;
-		@include flex-center();
-		color: var(--light);
-		font-size: var(--fs-md);
+  .sectionTitle {
+    height: 40px;
+    @include flex-center();
+    color: var(--light);
+    font-size: var(--fs-md);
 
-		@media (min-width: 1025px) {
-			font-size: (var(--fs-lg));
-			display: block;
-		}
-	}
+    @media (min-width: 1025px) {
+      font-size: (var(--fs-lg));
+      display: block;
+    }
+  }
 }
 
 @mixin base-element {
-	padding: var(--elements-padding);
-	border-radius: var(--border-radius);
-	font-size: var(--fs-md);
-	background-color: var(--cards-bg);
-	color: var(--dark);
-	font-weight: var(--fw-medium);
+  padding: var(--elements-padding);
+  border-radius: var(--border-radius);
+  font-size: var(--fs-md);
+  background: var(--cards-bg);
+  color: var(--white);
+  font-weight: var(--fw-medium);
 
-	&.select,
-	&.input,
-	&.textarea,
-	&.label {
-		background: var(--elements-bg);
-		color: var(--light);
-		&::placeholder {
-			color: var(--light);
-		}
-	}
+  &.select,
+  &.input,
+  &.textarea,
+  &.label {
+    background: var(--elements-bg);
+    color: var(--light);
+    &::placeholder {
+      color: var(--light);
+    }
+  }
 }
 
 @mixin button {
-	font-size: var(--fs-md);
-	font-weight: var(--fw-bold);
-	color: var(--light);
-	border-radius: var(--border-radius);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  color: var(--light);
+  border-radius: var(--border-radius);
 
-	cursor: pointer;
-	@include flex-center;
+  cursor: pointer;
+  @include flex-center;
 
-	&:not(.round) {
-		padding: var(--elements-padding);
-	}
+  &:not(.round) {
+    padding: var(--elements-padding);
+  }
 
-	&.actionButton {
-		background: var(--elements-bg);
-		transition: box-shadow 0.1s ease;
+  &.actionButton {
+    background: var(--elements-bg);
+    transition: box-shadow 0.1s ease;
 
-		&.round {
-			padding: 15px;
-			border-radius: 50%;
-		}
+    &.round {
+      padding: 15px;
+      border-radius: 50%;
+    }
 
-		&:active,
-		&:focus,
-		&:hover {
-			box-shadow: inset 4px 4px 3px 0px rgba(0, 0, 0, 0.2);
-		}
-	}
+    &:active,
+    &:focus,
+    &:hover {
+      box-shadow: inset 4px 4px 3px 0px rgba(0, 0, 0, 0.2);
+    }
+  }
 
-	&.ctaButton {
-		border-radius: var(--border-radius);
-		&:not(:disabled) {
-			transition: box-shadow 0.35s ease, opacity 0.35s ease, font-size 0.3ms 0.05s, padding 0.3ms 0.05s;
-		}
+  &.ctaButton {
+    border-radius: var(--border-radius);
+    &:not(:disabled) {
+      transition: box-shadow 0.35s ease, opacity 0.35s ease, font-size 0.3ms 0.05s, padding 0.3ms 0.05s;
+    }
 
-		&.ctaA:not(:disabled) {
-			background: var(--accent);
-			color: var(--dark);
-		}
+    &.ctaA:not(:disabled) {
+      background: var(--accent);
+      color: var(--dark);
+    }
 
-		&.ctaB:not(:disabled) {
-			background: var(--light);
-			color: var(--dark);
-		}
+    &.ctaB:not(:disabled) {
+      background: var(--light);
+      color: var(--dark);
+    }
 
-		&.ctaC:not(:disabled) {
-			background: var(--dark);
-			color: var(--light);
-		}
+    &.ctaC:not(:disabled) {
+      background: var(--dark);
+      color: var(--light);
+    }
 
-		&:active:not(:disabled),
-		&:focus:not(:disabled),
-		&:hover:not(:disabled) {
-			opacity: 0.9;
-			box-shadow: inset 4px 4px 3px 0px rgba(0, 0, 0, 0.2);
-			font-size: calc(var(--fs-md) - 1px);
-			padding: calc(var(--elements-padding) + 0.5px) var(--elements-padding);
-		}
+    &:active:not(:disabled),
+    &:focus:not(:disabled),
+    &:hover:not(:disabled) {
+      opacity: 0.9;
+      box-shadow: inset 4px 4px 3px 0px rgba(0, 0, 0, 0.2);
+      font-size: calc(var(--fs-md) - 1px);
+      padding: calc(var(--elements-padding) + 0.5px) var(--elements-padding);
+    }
 
-		&:disabled {
-			opacity: 0.2;
-		}
-	}
+    &:disabled {
+      opacity: 0.2;
+    }
+  }
 }
 
 @mixin form {
-	@include flex-column(var(--gap-md));
+  @include flex-column(var(--gap-md));
 
-	& > :last-child {
-		margin-top: var(--gap-md);
+  & > :last-child {
+    margin-top: var(--gap-md);
 
-		@media (min-width: 1025px) {
-			margin-top: unset;
-		}
-	}
+    @media (min-width: 1025px) {
+      margin-top: unset;
+    }
+  }
 
-	input:focus,
-	select:focus,
-	textarea:focus {
-		outline: 2px solid var(--light);
-	}
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: 2px solid var(--light);
+  }
 
-	textarea:not(:placeholder-shown):valid,
-	input:not(:placeholder-shown):valid,
-	input:focus:user-valid {
-		outline: 2px solid var(--secondary);
-	}
+  textarea:not(:placeholder-shown):valid,
+  input:not(:placeholder-shown):valid,
+  input:focus:user-valid {
+    outline: 2px solid var(--secondary);
+  }
 
-	textarea:focus:invalid,
-	input:not(:placeholder-shown):invalid {
-		outline: 2px solid var(--tertiary);
-	}
+  textarea:focus:invalid,
+  input:not(:placeholder-shown):invalid {
+    outline: 2px solid var(--tertiary);
+  }
 
-	textarea:focus:placeholder-shown:invalid,
-	input:focus:invalid {
-		outline: 2px solid var(--accent);
-	}
+  textarea:focus:placeholder-shown:invalid,
+  input:focus:invalid {
+    outline: 2px solid var(--accent);
+  }
+}
+
+@mixin card-shadow {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 }

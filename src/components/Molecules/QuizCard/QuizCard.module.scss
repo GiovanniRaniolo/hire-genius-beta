@@ -1,11 +1,14 @@
 .quizCardContainer {
   @include base-element;
   @include flex-column(var(--gap-md));
+  @include card-shadow;
   transition: transform 0.3s ease;
+  // border: 1px solid var(--tertiary);
 
+  color: var(--white);
   &.selectedCard {
     transform: scale(1.05);
-    border: 4px solid var(--dark);
+    border: 3px solid var(--tertiary);
   }
 
   .quizCard {
@@ -17,7 +20,7 @@
       height: 65px;
       width: 65px;
       position: relative;
-      background-color: var(--primary);
+      background-color: var(--light);
       border-radius: 50%;
       padding: 10px;
       border: 3px solid var(--tertiary);
@@ -68,6 +71,11 @@
         font-weight: var(--fw-regular);
       }
 
+      div {
+        span {
+          color: var(--light); // Cambia il colore del testo dello span
+        }
+      }
       .interviewerContainer {
         display: flex;
         justify-content: flex-end;
