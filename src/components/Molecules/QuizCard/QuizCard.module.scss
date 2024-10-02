@@ -24,7 +24,7 @@
   }
 
   .titleCard {
-    max-width: 290px;
+    max-width: 300px;
     font-size: var(--fs-md);
     white-space: nowrap;
     overflow: hidden;
@@ -47,8 +47,8 @@
 
     .quizCardImgContainer {
       position: relative;
-      height: 56px;
-      width: 56px;
+      height: 60px;
+      width: 60px;
       background-color: var(--light);
       border-radius: 50%;
       padding: 10px;
@@ -69,7 +69,7 @@
         @include card-shadow;
         bottom: 0;
         right: 0;
-        transform: translate(50%, 15%);
+        transform: translate(50%, 12%);
         border-radius: var(--border-radius);
         font-size: var(--fs-sm);
         font-weight: var(--fw-bold);
@@ -104,7 +104,7 @@
 
     .timeAndNum {
       @include flex-column(var(--gap-sm));
-      align-items: flex-start;
+      align-items: center;
     }
 
     div {
