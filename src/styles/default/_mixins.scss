@@ -16,15 +16,29 @@
   column-gap: ($gap);
 }
 
+@mixin card-shadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+@mixin effect-shadow {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+  &:after {
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+  }
+}
+
 @mixin main {
   width: 100dvw;
   max-width: 600px;
   min-height: 100dvh;
   margin: 0 auto;
 
-  @media (min-width: 1025px) {
-    padding-top: calc(100px + var(--page-padding));
-    max-width: 1300px;
+  @media (min-width: 767px) {
+    // padding-top: calc(100px + var(--page-padding));
+    max-width: 900px;
     @include flex-center;
   }
 
@@ -39,11 +53,8 @@
       min-height: unset;
 
       justify-content: space-between;
-      width: 100%;
-      padding: var(--page-padding) 0;
 
       & > div {
-        flex-grow: 1;
       }
     }
   }
@@ -94,6 +105,7 @@
   font-weight: var(--fw-bold);
   color: var(--light);
   border-radius: var(--border-radius);
+  @include effect-shadow;
 
   cursor: pointer;
   @include flex-center;
@@ -186,9 +198,4 @@
   input:focus:invalid {
     outline: 2px solid var(--accent);
   }
-}
-
-@mixin card-shadow {
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-    0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 }

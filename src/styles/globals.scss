@@ -24,9 +24,9 @@
 
   // COLORI
   --accent: #f9dc5c; //cta, timer, badge, risultati
-  --primary: #373c6d; //menu, background
-  --secondary: #92bcea; //badge e risultati
-  --tertiary: #dd5da6; //badge e risultati
+  --primary: #383e6e; //menu, background
+  --secondary: #3e9fff; //badge e risultati
+  --tertiary: #d161ba; //badge e risultati
   --fill: #444b88; //div fill
   --error: #d7263d; //error
 
@@ -36,13 +36,14 @@
   --dark: #2a3164; //background e button CTA C (es "avanti")
 
   // MODIFICATE
-  --background: linear-gradient(to right, #373c6d 70%, #373c6d 99%);
+  --background: linear-gradient(to right, var(--primary) 70%, #373c6d 99%);
+
+  --tertiary-gradient: linear-gradient(95deg, #a54777 0%, #d161ba 50%, #bc6be7 100%);
+  --secondary-gradient: linear-gradient(95deg, #2e77c5 0%, #3e9fff 50%, #3182d8 100%);
 
   --elements-bg: rgba(211, 211, 211, 0.2);
   --cards-bg: linear-gradient(45deg, rgba(68, 75, 136, 1) 50%, rgba(82, 90, 163, 1) 78%, rgba(106, 113, 180, 1) 100%);
-  // --correct-bg: rgba(139, 186, 166, 0.2);
-  // --average-bg: rgba(251, 255, 0, 0.2);
-  // --incorrect-bg: rgba(255, 96, 144, 0.2);
+
   --correct-bg: rgb(174, 202, 191);
   --average-bg: rgb(202, 204, 180);
   --incorrect-bg: rgb(201, 177, 184);

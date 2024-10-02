@@ -1,22 +1,39 @@
 .main {
   @include main;
-  padding: var(--page-padding);
   @include flex-column(var(--gap-sm));
+  padding: var(--page-padding);
 
-  @media (min-width: 1025px) {
-    padding-left: 0;
-    padding-right: 0;
-  }
+  // {
+  //   padding-left: 0;
+  //   padding-right: 0;
+  // }
 
   .container {
     @include flex-column(var(--gap-lg));
     padding: 0;
-
-    @media (min-width: 1025px) {
-      flex-direction: row;
-      column-gap: var(--page-padding);
-      align-items: start;
+    .recentTests {
+      color: var(--white);
+      padding-bottom: var(--gap-sm);
+      font-weight: var(--fw-bold);
+      background-color: var(--dark);
+      border-radius: var(--border-radius);
+      padding: 8px 16px;
+      display: inline-block;
+      margin-bottom: 12px;
+      @media (min-width: 767px) {
+        gap: 64px;
+      }
+      span {
+        margin-left: 8px;
+        color: var(--tertiary);
+      }
     }
+
+    // @media (min-width: 767px) {
+    //   flex-direction: row;
+    //   column-gap: var(--page-padding);
+    //   align-items: start;
+    // }
   }
 
   .header {
@@ -26,8 +43,8 @@
   color: var(--light);
 
   .userInfo {
-    @include flex-column(2px);
-    align-items: flex-end;
+    @include flex(var(--gap-md));
+    justify-content: flex-end;
     padding-bottom: var(--gap-sm);
     border-bottom: 1px solid var(--white);
 
@@ -36,12 +53,58 @@
       font-weight: var(--fw-regular);
       font-size: var(--fs-sm);
     }
+
+    .NameAndMail {
+      @include flex-column(1px);
+      align-items: flex-end;
+      padding-bottom: var(--gap-sm);
+    }
+  }
+
+  .headerButtons {
+    @include flex(var(--gap-md));
+    justify-content: center;
+    button {
+      font-weight: var(--fw-bold);
+      display: flex;
+      align-items: center;
+      gap: var(--gap-sm);
+      color: var(--white);
+
+      background: var(--tertiary-gradient);
+
+      @include effect-shadow;
+      font-size: var(--fs-md);
+      padding: 10px 18px;
+      border-radius: var(--border-radius);
+    }
+
+    a:nth-child(2) button {
+      background: var(--secondary-gradient);
+    }
+  }
+
+  section {
+    @media (min-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: space-around;
+      margin-left: 36px;
+    }
   }
 
   .cardsList {
-    @include flex-column(var(--gap-sm));
-    @media (min-width: 1025px) {
-      width: 50%;
+    @include flex-column(var(--gap-md));
+    align-items: center;
+
+    @media (min-width: 767px) {
+      flex-direction: row;
+      column-gap: var(--page-padding);
+      // align-items: flex-start;
+      justify-content: flex-start;
+
+      flex-wrap: wrap;
     }
   }
 
