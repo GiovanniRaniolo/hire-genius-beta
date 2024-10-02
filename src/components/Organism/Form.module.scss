@@ -1,43 +1,44 @@
 .form {
-	@include form;
-	padding-bottom: var(--gap-md);
-	border-bottom: 1px solid var(--lightGrey);
+  @include form;
+  padding-bottom: var(--gap-md);
+  border-bottom: 1px solid var(--lightGrey);
 
-	.inputs {
-		@include flex-column(var(--gap-md));
-	}
+  .inputs {
+    @include flex-column(var(--gap-md));
+  }
 
-	@media (min-width: 1025px) {
-		width: 100%;
+  @media (min-width: 767px) {
+    width: 100%;
 
-		.inputs {
-			flex-direction: row;
-			column-gap: var(--gap-md);
-		}
-	}
+    .inputs {
+      flex-direction: row;
+      column-gap: var(--gap-md);
+    }
+  }
 
-	.forgotPassword {
-		color: var(--light);
-		font-weight: var(--fw-regular);
-		text-align: right;
-		cursor: pointer;
-		text-decoration: underline;
+  .forgotPassword {
+    color: var(--white);
+    font-weight: var(--fw-regular);
+    text-align: right;
+    cursor: pointer;
+    text-decoration: underline;
 
-		transition: all 0.35s ease;
-		&:active,
-		&:focus,
-		&:hover {
-			color: var(--dark);
-			font-weight: var(--fw-bold);
-		}
-	}
+    transition: all 0.35s ease;
+    &:active,
+    &:focus,
+    &:hover {
+      color: var(--dark);
+      font-weight: var(--fw-bold);
+    }
+  }
 
-	mark.invalid {
-		background: var(--tertiary);
-		color: var(--white);
-		font-weight: var(--fw-regular);
-		padding: calc(var(--elements-padding) / 2) var(--elements-padding);
-		width: fit-content;
-		font-size: var(--fs-sm);
-	}
+  mark.invalid {
+    background: var(--error);
+    color: var(--white);
+    font-weight: var(--fw-regular);
+    padding: calc(var(--elements-padding) / 2) var(--elements-padding);
+    width: fit-content;
+    border-radius: var(--border-radius);
+    font-size: var(--fs-sm);
+  }
 }

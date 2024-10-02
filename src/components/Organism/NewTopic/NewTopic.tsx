@@ -11,48 +11,62 @@ import InputBox from "@/components/Molecules/InputBox/InputBox";
 import { TopicFormProps } from "@/interfaces/interfaces";
 
 const NewTopic: React.FC<TopicFormProps> = ({ onSubmit }) => {
-	const [topic, setTopic] = useState("");
-	const [level, setLevel] = useState("");
-	const [numQuestions, setNumQuestions] = useState("");
+  const [topic, setTopic] = useState("");
+  const [level, setLevel] = useState("");
+  const [numQuestions, setNumQuestions] = useState("");
 
-	const handleSubmit = (e: React.FormEvent) => {
-		e.preventDefault();
-		console.log({ topic, level, numQuestions });
-		onSubmit({ topic, level, numQuestions });
-	};
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log({ topic, level, numQuestions });
+    onSubmit({ topic, level, numQuestions });
+  };
 
-	return (
-		<main className={style.main}>
-			<div className={style.container}>
-				<header className={style.header}>
-					<h2 className={style.sectionTitle}>{customFormLabels.title}</h2>
+  return (
+    <main className={style.main}>
+      <div className={style.container}>
+        <header className={style.header}>
+          <h2 className={style.sectionTitle}>{customFormLabels.title}</h2>
 
-					<div className={style.hero}>
-						<Image src={topicHero} alt='Topic image' width={634} height={364} priority={true} />
-					</div>
-				</header>
+          <div className={style.hero}>
+            <Image src={topicHero} alt="Topic image" width={634} height={364} priority={true} />
+          </div>
+        </header>
 
-				<div>
-					<form onSubmit={handleSubmit}>
-						<InputBox type='text' name='topic' label={customFormLabels.topicLabel} value={topic} onChange={(e) => setTopic(e.target.value)} />
+        <div>
+          <form onSubmit={handleSubmit}>
+            <InputBox
+              type="text"
+              name="topic"
+              label={customFormLabels.topicLabel}
+              value={topic}
+              placeholder={customFormLabels.topicPlaceholder}
+              onChange={(e) => setTopic(e.target.value)}
+            />
 
-						<SelectBox name='level' label={customFormLabels.level} value={level} onChange={(e) => setLevel(e.target.value)} required={false} options={customFormOptions.optionsLevel} />
+            <SelectBox
+              name="level"
+              label={customFormLabels.level}
+              value={level}
+              onChange={(e) => setLevel(e.target.value)}
+              required={false}
+              options={customFormOptions.optionsLevel}
+            />
 
-						<SelectBox
-							label={customFormLabels.numberOfQuestionsLabel}
-							name='numQuestions'
-							value={numQuestions}
-							onChange={(e) => setNumQuestions(e.target.value)}
-							required={false}
-							options={customFormOptions.optionsQuestion}
-						/>
+            <SelectBox
+              label={customFormLabels.numberOfQuestionsLabel}
+              name="numQuestions"
+              value={numQuestions}
+              onChange={(e) => setNumQuestions(e.target.value)}
+              required={false}
+              options={customFormOptions.optionsQuestion}
+            />
 
-						<CtaButton type='submit' label={customFormLabels.button} className='ctaB' disabled={topic === ""} />
-					</form>
-				</div>
-			</div>
-		</main>
-	);
+            <CtaButton type="submit" label={customFormLabels.button} className="ctaB" disabled={topic === ""} />
+          </form>
+        </div>
+      </div>
+    </main>
+  );
 };
 
 export default NewTopic;

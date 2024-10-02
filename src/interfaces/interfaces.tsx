@@ -14,6 +14,7 @@ export interface InputBoxProps {
   value: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   required?: boolean;
+  placeholder?: string;
 }
 
 // SelectBox
