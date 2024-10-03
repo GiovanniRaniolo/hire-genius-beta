@@ -89,8 +89,9 @@
   &.input,
   &.textarea,
   &.label {
-    background: var(--elements-bg);
-    color: var(--light);
+    padding: var(--elements-padding);
+    background: var(--dark);
+    color: var(--white);
     &::placeholder {
       color: var(--light);
     }
@@ -100,7 +101,7 @@
 @mixin button {
   font-size: var(--fs-md);
   font-weight: var(--fw-bold);
-  color: var(--light);
+  color: var(--white);
   border-radius: var(--border-radius);
   @include effect-shadow;
 
@@ -112,7 +113,7 @@
   }
 
   &.actionButton {
-    background: var(--elements-bg);
+    background: var(--tertiary-gradient);
     transition: box-shadow 0.1s ease;
 
     &.round {
@@ -134,18 +135,20 @@
     }
 
     &.ctaA:not(:disabled) {
-      background: var(--accent);
-      color: var(--dark);
+      background: var(--secondary-gradient);
+      color: var(--white);
     }
 
     &.ctaB:not(:disabled) {
-      background: var(--light);
-      color: var(--dark);
+      background: var(--tertiary-gradient);
+      color: var(--white);
     }
 
     &.ctaC:not(:disabled) {
-      background: var(--dark);
-      color: var(--light);
+      background: var(--accent);
+      color: var(--dark);
+      font-weight: var(--fw-bold);
+      // padding: 9px;
     }
 
     &:active:not(:disabled),

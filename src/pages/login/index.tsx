@@ -50,7 +50,7 @@ const Login = () => {
             <div className={style.header}>
               <h1>HireGenius</h1>
               <h2>
-                Login
+                Login/
                 <span>Accedi e testa le tue competenze!</span>
               </h2>
             </div>

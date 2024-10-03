@@ -154,6 +154,7 @@
 
   .buttonsContainer {
     @include flex-center;
+    justify-content: space-between;
     gap: var(--gap-sm);
     min-width: 300px;
     button {
@@ -162,10 +163,11 @@
 
     .deleteButton {
       @include effect-shadow;
-      width: 58px;
-      height: 58px;
-      background-color: var(--dark);
-      padding: 10px;
+      position: relative;
+      width: 56px;
+      height: 56px;
+      background-color: var(--error);
+      padding: 9px;
       border-radius: 100px;
       cursor: pointer;
       &:hover {

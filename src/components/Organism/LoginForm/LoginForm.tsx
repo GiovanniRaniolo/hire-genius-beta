@@ -62,6 +62,9 @@ const LoginForm = () => {
       </p>
 
       <CtaButton label="Accedi" className="ctaA" type="submit" />
+      <div className={style.divider}>
+        <span>oppure</span>
+      </div>
     </form>
   );
 };

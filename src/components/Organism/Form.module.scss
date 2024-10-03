@@ -1,7 +1,5 @@
 .form {
   @include form;
-  padding-bottom: var(--gap-md);
-  border-bottom: 1px solid var(--lightGrey);
 
   .inputs {
     @include flex-column(var(--gap-md));
@@ -19,6 +17,7 @@
   .forgotPassword {
     color: var(--white);
     font-weight: var(--fw-regular);
+    font-size: var(--fs-sm);
     text-align: right;
     cursor: pointer;
     text-decoration: underline;
@@ -40,5 +39,29 @@
     width: fit-content;
     border-radius: var(--border-radius);
     font-size: var(--fs-sm);
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      border-bottom: 1px solid var(--lightGrey);
+      margin: 0 2px; // Distanza tra la linea e il testo
+    }
+
+    span {
+      background-color: var(--primary); // Colore di sfondo uguale al form
+      padding: 0 10px; // Distanza tra il testo e la linea
+      color: var(--white); // Colore del testo
+    }
   }
 }
