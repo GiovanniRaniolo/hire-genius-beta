@@ -7,13 +7,12 @@
     display: none;
   }
 
-  @media (min-width: 1025px) {
+  @media (min-width: 767px) {
     position: fixed;
-
     height: 100px;
     width: 100%;
-    background-color: var(--lighter);
-    color: var(--dark);
+    background-color: var(--dark);
+    color: var(--accent);
 
     & > button {
       display: none;
@@ -44,12 +43,12 @@
         & a:hover {
           color: var(--light);
           background-color: var(--primary);
-          border: 2px solid var(--primary);
+          border: 2px solid var(--light);
         }
 
         & a:not(:hover) {
-          color: var(--dark);
-          border: 2px solid var(--dark);
+          color: var(--tertiary);
+          border: 2px solid var(--tertiary);
         }
       }
     }

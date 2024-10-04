@@ -34,9 +34,10 @@
     .main {
       @include flex-column(var(--gap-md));
       padding: 0 var(--page-padding) var(--page-padding);
+      width: 460px;
 
       @media (min-width: 767px) {
-        padding: 0;
+        padding: -0px;
         align-items: start;
 
         @media (min-width: 767px) {
