@@ -13,6 +13,8 @@ import { useAuth } from "@/context/AuthContext";
 import { EvaluationResult, InterviewDetails } from "@/interfaces/interfaces";
 import CtaButton from "@/components/Atoms/Buttons/CtaButton";
 import ConfirmDeletePopup from "../../Atoms/ConfirmDeletePopup/ConfirmDeletePopup";
+import React from "react";
+import TimeIcon from "@/../public/icons/time.svg";
 
 interface InterviewSession {
   sessionId: string;
@@ -57,8 +59,9 @@ const QuizCard: React.FC<QuizCardProps> = ({ interviewSession, onDelete, setSele
     locale: it, // Imposta il locale italiano
   })
     .replace("circa", "")
+    .trim()
+    .replace("meno di", "")
     .trim();
-
   // Cancellazione
   const handleDelete = () => {
     setShowPopup(true);
@@ -83,6 +86,8 @@ const QuizCard: React.FC<QuizCardProps> = ({ interviewSession, onDelete, setSele
   return (
     <>
       <div onClick={() => setShowFeedback(!showPopup ? !showFeedback : false)} className={`${style.quizCardContainer} ${showFeedback && style.selectedCard} `}>
+        <h4 className={`${style.titleCard} ${showFeedback ? style.fullText : ""}`}>{interviewSession.interviewDetails.topic}</h4>
+
         <div className={style.quizCard}>
           <div className={style.quizCardImgContainer}>
             <Image src={iconSrc} className={style.icon} alt="Icon" width={80} height={80} />
@@ -90,16 +95,18 @@ const QuizCard: React.FC<QuizCardProps> = ({ interviewSession, onDelete, setSele
               <span>{interviewSession.evaluationResult.globalEvaluation.points}%</span>
             </div>
           </div>
-          <div className={style.content}>
-            <div>
-              <h4 className={`${style.titleCard} ${showFeedback ? style.fullText : ""}`}>{interviewSession.interviewDetails.topic}</h4>
+          <div className={style.timeAndNum}>
+            <div className={style.timeContainer}>
+              <Image src={TimeIcon} className={style.icon} alt="Time Icon" width={16} height={16} />
               <span>{dateFromNow}</span>
             </div>
-            <div className={style.interviewerContainer}>
-              <span>{interviewSession.interviewDetails.interviewer.name}</span>
-              <div className={style.avatarInterviewer}>
-                <Image src={interviewSession.interviewDetails.interviewer.avatarSrc} alt={interviewSession.interviewDetails.interviewer.name}></Image>
-              </div>
+
+            <div className={style.numQuestionContainer}>{interviewSession.evaluationResult.evaluatedResponses.length} domande</div>
+          </div>
+          <div className={style.interviewerContainer}>
+            <span>{interviewSession.interviewDetails.interviewer.name}</span>
+            <div className={style.avatarInterviewer}>
+              <Image src={interviewSession.interviewDetails.interviewer.avatarSrc} alt={interviewSession.interviewDetails.interviewer.name}></Image>
             </div>
           </div>
         </div>

@@ -1,58 +1,110 @@
 .main {
-	@include main;
-	padding: var(--page-padding);
-	@include flex-column(var(--gap-md));
+  @include main;
+  @include flex-column(var(--gap-sm));
+  padding: var(--page-padding);
 
-	@media (min-width: 1025px) {
-		padding-left: 0;
-		padding-right: 0;
-	}
+  .container {
+    @include flex-column(var(--gap-lg));
+    padding: 0;
+    .recentTests {
+      color: var(--white);
+      padding-bottom: var(--gap-sm);
+      font-weight: var(--fw-bold);
+      background-color: var(--dark);
+      border-radius: var(--border-radius);
+      padding: 8px 16px;
+      display: inline-block;
+      margin-bottom: 12px;
+      @media (min-width: 767px) {
+        gap: 64px;
+      }
+      span {
+        margin-left: 8px;
+        color: var(--tertiary);
+      }
+    }
+  }
 
-	.container {
-		@include flex-column(var(--gap-lg));
-		padding: 0;
+  .header {
+    @include header;
+  }
 
-		@media (min-width: 1025px) {
-			flex-direction: row;
-			column-gap: var(--page-padding);
-			align-items: start;
-		}
-	}
+  color: var(--light);
 
-	.header {
-		@include header;
-	}
+  .userInfo {
+    @include flex(var(--gap-md));
+    justify-content: flex-end;
+    padding-bottom: var(--gap-sm);
+    border-bottom: 1px solid var(--white);
 
-	color: var(--light);
+    span {
+      color: var(--white);
+      font-weight: var(--fw-regular);
+      font-size: var(--fs-sm);
+    }
 
-	.userInfo {
-		@include flex(var(--gap-md));
-		justify-content: flex-end;
-		padding-bottom: var(--gap-lg);
-		border-bottom: 1px solid var(--light);
+    .NameAndMail {
+      @include flex-column(1px);
+      align-items: flex-end;
+      padding-bottom: var(--gap-sm);
+    }
+  }
 
-		span {
-			font-weight: var(--fw-regular);
-		}
-	}
+  .headerButtons {
+    @include flex(var(--gap-md));
+    justify-content: center;
+    button {
+      font-weight: var(--fw-bold);
+      display: flex;
+      align-items: center;
+      gap: var(--gap-sm);
+      color: var(--white);
 
-	.cardsList {
-		@include flex-column(var(--gap-md));
-		@media (min-width: 1025px) {
-			width: 50%;
-		}
-	}
+      background: var(--tertiary-gradient);
 
-	.linkBtn {
-		width: 100%;
+      @include effect-shadow;
+      font-size: var(--fs-md);
+      padding: 10px 18px;
+      border-radius: var(--border-radius);
+    }
 
-		@media (min-width: 1025px) {
-			width: unset;
-		}
+    a:nth-child(2) button {
+      background: var(--secondary-gradient);
+    }
+  }
 
-		button {
-			@include button;
-			width: 100%;
-		}
-	}
+  section {
+    @media (min-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: space-around;
+      margin-left: 36px;
+    }
+  }
+
+  .cardsList {
+    @include flex-column(var(--gap-md));
+    align-items: center;
+
+    @media (min-width: 767px) {
+      flex-direction: row;
+      column-gap: var(--page-padding);
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+  }
+
+  .linkBtn {
+    width: 100%;
+
+    @media (min-width: 1025px) {
+      width: unset;
+    }
+
+    button {
+      @include button;
+      width: 100%;
+    }
+  }
 }

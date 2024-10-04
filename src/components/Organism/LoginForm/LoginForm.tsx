@@ -12,51 +12,75 @@ import InputBox from "@/components/Molecules/InputBox/InputBox";
 import Link from "next/link";
 
 const LoginForm = () => {
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
-	const [error, setError] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-	const [isLoading, setIsLoading] = useState(false);
+  const { login } = useAuth();
+  const router = useRouter();
 
-	const { login } = useAuth();
-	const router = useRouter();
+  // Validazione email
+  const isEmailValid = (email: string) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  };
 
-	const handleLogin = async (e: React.FormEvent) => {
-		e.preventDefault();
-		setError("");
+  // Validazione password
+  const isPasswordValid = (password: string) => {
+    return password.length >= 6; // Controlla che la password sia lunga almeno 6 caratteri
+  };
 
-		try {
-			setIsLoading(true);
-			await login(email, password);
-			setIsLoading(false);
-			router.push("./landing-page");
-		} catch (error) {
-			setIsLoading(false);
-			setError("Le credenziali inserite non sono corrette.");
-		}
-	};
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError("");
 
-	{
-		if (isLoading) return <Loading />;
-	}
+    try {
+      setIsLoading(true);
+      await login(email, password);
+      setIsLoading(false);
+      router.push("./landing-page");
+    } catch (error) {
+      setIsLoading(false);
+      setError("Le credenziali inserite non sono corrette.");
+    }
+  };
 
-	return (
-		<form className={style.form} onSubmit={handleLogin}>
-			<div className={style.inputs}>
-				<InputBox type='email' name='userEmail' label='Email' value={email} onChange={(e) => setEmail(e.target.value)} required={true} />
+  if (isLoading) return <Loading />;
 
-				<InputBox type='password' name='userPassword' label='Password' value={password} onChange={(e) => setPassword(e.target.value)} required={true} />
-			</div>
+  return (
+    <form className={style.form} onSubmit={handleLogin}>
+      {error && <mark className={style.invalid}>{error}</mark>}
+      <div className={style.inputs}>
+        <InputBox type="email" name="userEmail" label="Email" value={email} placeholder="Inserisci la tua e-mail" onChange={(e) => setEmail(e.target.value)} required={true} />
 
-			<p className={style.forgotPassword}>
-				<Link href='/forgot-password'>Hai dimenticato la password?</Link>
-			</p>
+        <InputBox
+          type="password"
+          name="userPassword"
+          label="Password"
+          minLength={6}
+          value={password}
+          placeholder="Inserisci la tua password"
+          onChange={(e) => setPassword(e.target.value)}
+          required={true}
+        />
+      </div>
 
-			{error && <mark className={style.invalid}>{error}</mark>}
+      <p className={style.forgotPassword}>
+        <Link href="/forgot-password">Hai dimenticato la password?</Link>
+      </p>
 
-			<CtaButton label='Accedi' className='ctaA' type='submit' />
-		</form>
-	);
+      <CtaButton
+        label="Accedi"
+        className="ctaA"
+        type="submit"
+        disabled={!isEmailValid(email) || !isPasswordValid(password)} // Disabilita il bottone se l'email o la password non sono validi
+      />
+      <div className={style.divider}>
+        <span>oppure</span>
+      </div>
+    </form>
+  );
 };
 
 export default LoginForm;
