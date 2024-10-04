@@ -1,42 +1,43 @@
 .main {
-	@include main;
+  @include main;
 
-	.container {
-		@include flex-column(var(--gap-lg));
+  .container {
+    @include flex-column(var(--gap-sm));
 
-		@media (min-width: 1025px) {
-			flex-direction: row;
-			column-gap: var(--page-padding);
+    @media (min-width: 767px) {
+      flex-direction: row;
+      column-gap: var(--page-padding);
+      justify-content: center;
+    }
 
-			align-items: stretch;
-		}
+    .header {
+      @include header;
 
-		.header {
-			@include header;
+      .hero {
+        background: var(--secondary-gradient);
+        border-radius: var(--border-radius);
+        border: 3px solid var(--tertiary);
+        overflow: hidden;
+        display: flex;
+        align-items: end;
 
-			.hero {
-				background-color: var(--elements-bg);
-				border-radius: var(--border-radius);
-				overflow: hidden;
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      @media (min-width: 767px) {
+        max-width: 50%;
+      }
+    }
 
-				display: flex;
-				align-items: end;
+    form {
+      @include form;
 
-				img {
-					display: block;
-					width: 100%;
-					height: 100%;
-				}
-			}
-		}
-
-		form {
-			@include form;
-
-			@media (min-width: 1025px) {
-				height: 100%;
-				justify-content: space-between;
-			}
-		}
-	}
+      @media (min-width: 767px) {
+        padding-top: 46px;
+      }
+    }
+  }
 }

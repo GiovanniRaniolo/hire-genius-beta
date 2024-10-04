@@ -1,11 +1,12 @@
 .login {
+  @include main;
   .loginContainer {
     min-height: 100dvh;
     @include flex-column(var(--gap-md));
     justify-content: center;
 
     @media (min-width: 767px) {
-      margin: 0 auto;
+      margin: 0 31px;
       max-width: 1000px;
       flex-direction: row;
       column-gap: var(--page-padding);
@@ -72,6 +73,7 @@
       .register {
         text-align: center;
         color: var(--white);
+        padding-top: 6px;
 
         @media (min-width: 767px) {
           align-self: center;

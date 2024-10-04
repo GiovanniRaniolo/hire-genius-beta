@@ -32,23 +32,25 @@
 
 @mixin main {
   width: 100dvw;
+  height: 100vh;
   max-width: 600px;
-  min-height: 100dvh;
   margin: 0 auto;
 
   @media (min-width: 767px) {
-    // padding-top: calc(100px + var(--page-padding));
     max-width: 900px;
     @include flex-center;
   }
 
+  @media (min-height: 767px) {
+    overflow: hidden; // Evita lo scroll
+  }
   .container {
     padding: var(--page-padding);
     min-height: 100dvh;
 
     @include flex-column(var(--gap-lg));
 
-    @media (min-width: 1025px) {
+    @media (min-width: 767px) {
       display: block;
       min-height: unset;
 
@@ -58,17 +60,33 @@
 }
 
 @mixin header {
-  @include flex-column(var(--fs-lg));
+  @include flex-column(var(--gap-sm));
+  h2 {
+    margin-bottom: var(--elements-padding);
+  }
+  p {
+    color: var(--white);
+    // padding: var(--elements-padding);
+    // padding-top: 0;
+    padding-bottom: var(--elements-padding);
+    padding-right: var(--elements-padding);
+    span {
+      color: var(--tertiary);
+      font-size: var(--fs-lg);
+      line-height: 42px;
+    }
+  }
 
-  @media (min-width: 1025px) {
+  @media (min-width: 767px) {
     justify-content: start;
+    gap: var(--gap-md);
   }
 
   .sectionTitle {
     height: 40px;
     @include flex-center();
-    color: var(--light);
-    font-size: var(--fs-md);
+    color: var(--white);
+    font-size: var(--fs-lg);
 
     @media (min-width: 1025px) {
       font-size: (var(--fs-lg));
@@ -184,11 +202,12 @@
   @include flex-column(var(--gap-md));
 
   & > :last-child {
-    margin-top: var(--gap-md);
-
-    @media (min-width: 1025px) {
-      margin-top: unset;
-    }
+    margin-top: var(--gap-lg);
+  }
+  @media (min-width: 767px) {
+    margin-top: unset;
+    width: 366px;
+    justify-content: center;
   }
 
   input:focus,

@@ -16,14 +16,14 @@ const Register = () => {
         <Image className={style.heroImg} src={LoginHeroLG} alt="Hero image" width={444} height={585} priority={true} />
 
         <main className={style.main}>
-          <header className={style.header}>
+          <div className={style.header}>
+            <h1>HireGenius</h1>
             <h2>
               Registrati | <span>Mettiti subito in gioco!</span>
             </h2>
-          </header>
+          </div>
 
           <RegisterForm />
-          {/* {error && <p>{error}</p>} */}
 
           <p className={style.register}>
             Hai già un account?{" "}

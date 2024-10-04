@@ -30,6 +30,14 @@ const NewTopic: React.FC<TopicFormProps> = ({ onSubmit }) => {
           <div className={style.hero}>
             <Image src={topicHero} alt="Topic image" width={634} height={364} priority={true} />
           </div>
+
+          <p>
+            {" "}
+            <span>Approccio Mirato!</span>
+            <br />
+            Esercitati su domande specifiche. <br />
+            Inserisci l'argomento su cui desideri concentrarti e vai allo step successivo.
+          </p>
         </header>
 
         <div>
@@ -62,7 +70,7 @@ const NewTopic: React.FC<TopicFormProps> = ({ onSubmit }) => {
               options={customFormOptions.optionsQuestion}
             />
 
-            <CtaButton type="submit" label={customFormLabels.button} className="ctaB" disabled={topic === ""} />
+            <CtaButton type="submit" label={customFormLabels.button} className="ctaB" disabled={topic.length < 3} />
           </form>
         </div>
       </div>

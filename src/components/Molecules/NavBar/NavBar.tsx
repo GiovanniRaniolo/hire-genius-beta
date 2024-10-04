@@ -5,7 +5,7 @@ import { navMenu, footerMenu } from "@/constants/menuData";
 import ActionButton from "@/components/Atoms/Buttons/ActionButton";
 import MenuIcon from "@/../public/icons/menu-icon.png";
 import Image from "next/image";
-import { useAuth } from "@/context/AuthContext"; // Importa il contesto di autenticazione
+import { useAuth } from "@/context/AuthContext";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);

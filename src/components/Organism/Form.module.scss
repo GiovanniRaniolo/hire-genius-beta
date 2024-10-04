@@ -2,7 +2,7 @@
   @include form;
 
   .inputs {
-    @include flex-column(var(--gap-md));
+    @include flex-column(var(--gap-sm));
   }
 
   @media (min-width: 767px) {
@@ -11,6 +11,9 @@
     .inputs {
       flex-direction: row;
       column-gap: var(--gap-md);
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      padding: var(--element-padding);
     }
   }
 
@@ -37,7 +40,9 @@
     font-size: var(--fs-sm);
     padding: var(--elements-padding);
     padding-top: 9px;
+    padding-bottom: 6px;
     border-top: 1px solid var(--lightGrey);
+    margin-top: 0;
   }
 
   mark.invalid {
@@ -64,13 +69,13 @@
       content: "";
       flex: 1;
       border-bottom: 1px solid var(--lightGrey);
-      margin: 0 2px; // Distanza tra la linea e il testo
+      margin: 0 2px;
     }
 
     span {
-      background-color: var(--primary); // Colore di sfondo uguale al form
-      padding: 0 10px; // Distanza tra il testo e la linea
-      color: var(--white); // Colore del testo
+      background-color: var(--primary);
+      padding: 0 10px;
+      color: var(--white);
     }
   }
 }

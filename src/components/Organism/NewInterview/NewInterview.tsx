@@ -1,7 +1,7 @@
 // components/Organism/NewTopic/NewTopic.tsx
 import React, { useState } from "react";
 import { interviewFormLabels, interviewFormOptions } from "@/constants/menuData";
-import style from "./NewInterview.module.scss";
+import style from "../NewTopic/NewTopic.module.scss";
 import CtaButton from "@/components/Atoms/Buttons/CtaButton";
 import SelectBox from "@/components/Molecules/SelectBox/SelectBox";
 
@@ -30,8 +30,14 @@ const NewInterview: React.FC<TopicFormProps> = ({ onSubmit }) => {
           <div className={style.hero}>
             <Image src={interviewHero} alt="Interview image" width={634} height={364} priority={true} />
           </div>
+          <p>
+            {" "}
+            <span>Simulazione Realistica!</span>
+            <br />
+            Preparati ad affrontare le interviste nel mondo reale. <br />
+            Inserisci la posizione a cui intendi candidarti e vai allo step successivo.
+          </p>
         </header>
-
         <div>
           <form onSubmit={handleSubmit}>
             <InputBox
@@ -62,7 +68,7 @@ const NewInterview: React.FC<TopicFormProps> = ({ onSubmit }) => {
               options={interviewFormOptions.optionsQuestion}
             />
 
-            <CtaButton type="submit" label={interviewFormLabels.button} className="ctaB" disabled={interview == ""} />
+            <CtaButton type="submit" label={interviewFormLabels.button} className="ctaB" disabled={interview.length < 3} />
           </form>
         </div>
       </div>

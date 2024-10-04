@@ -39,7 +39,7 @@ const LoginForm = () => {
       setIsLoading(true);
       await login(email, password);
       setIsLoading(false);
-      router.push("./landing-page");
+      router.push("./storic-profile");
     } catch (error) {
       setIsLoading(false);
       setError("Le credenziali inserite non sono corrette.");

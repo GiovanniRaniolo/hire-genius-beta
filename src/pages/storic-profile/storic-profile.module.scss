@@ -1,5 +1,8 @@
 .main {
   @include main;
+  @media (min-height: 767px) {
+    overflow: visible; // Evita lo scroll
+  }
   @include flex-column(var(--gap-sm));
   padding: var(--page-padding);
 

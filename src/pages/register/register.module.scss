@@ -1,11 +1,11 @@
 .main {
-	@include main;
+  @include main;
 
-	.header {
-		@include header;
-	}
+  .header {
+    @include header;
+  }
 
-	.privacyInfo {
-		color: var(--light);
-	}
+  .privacyInfo {
+    color: var(--light);
+  }
 }

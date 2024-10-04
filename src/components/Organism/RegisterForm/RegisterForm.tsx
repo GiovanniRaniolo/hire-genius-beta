@@ -73,32 +73,32 @@ const RegisterForm = () => {
 
   return (
     <form className={style.form} onSubmit={handleRegister}>
-      <InputBox
-        type="text"
-        name="userName"
-        label="Username"
-        value={userName}
-        onChange={(e) => setUserName(e.target.value)}
-        required={true}
-        placeholder="Inserisci il tuo nome utente"
-        minLength={3}
-      />
+      <div className={style.inputs}>
+        <InputBox
+          type="text"
+          name="userName"
+          label="Username"
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
+          required={true}
+          placeholder="Inserisci il tuo nome utente"
+          minLength={3}
+        />
 
-      <InputBox type="email" name="userEmail" label="Email" value={email} onChange={(e) => setEmail(e.target.value)} required={true} placeholder="Inserisci la tua email" />
+        <InputBox type="email" name="userEmail" label="Email" value={email} onChange={(e) => setEmail(e.target.value)} required={true} placeholder="Inserisci la tua email" />
 
-      <InputBox
-        type="password"
-        name="userPassword"
-        label="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required={true}
-        placeholder="Scegli una password di almeno 6 caratteri"
-        minLength={6}
-      />
-
-      {error && <mark className={style.invalid}>{error}</mark>}
-
+        <InputBox
+          type="password"
+          name="userPassword"
+          label="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required={true}
+          placeholder="Scegli una password di almeno 6 caratteri"
+          minLength={6}
+        />
+        {error && <mark className={style.invalid}>{error}</mark>}
+      </div>
       <CtaButton label="Registrati" className="ctaA" type="submit" disabled={!isEmailValid(email) || !isPasswordValid(password)} />
       <p className={style.privacyInfo}>*I tuoi dati saranno protetti secondo GDPR e usati soltanto per personalizzare la tua esperienza.</p>
     </form>

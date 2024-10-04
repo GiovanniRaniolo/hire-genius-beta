@@ -1,15 +1,16 @@
-import HomeIcon from "@/../public/icons/home.png";
-import TopicIcon from "@/../public/icons/topic.png";
-import InterviewIcon from "@/../public/icons/interview.png";
+import HomeIcon from "@/../public/icons/home.svg";
+import TopicIcon from "@/../public/icons/topic.svg";
+import InterviewIcon from "@/../public/icons/interview.svg";
 import ProfileIcon from "@/../public/icons/profile.png";
-import LogoutIcon from "@/../public/icons/logout.png";
-import LoginIcon from "@/../public/icons/login.png";
+import LogoutIcon from "@/../public/icons/logout.svg";
+import LoginIcon from "@/../public/icons/login.svg";
+// Icons from: https://www.svgrepo.com/collection/wave-oval-interface-icons/
 
 export const navMenu = [
   {
     icon: HomeIcon,
     label: "Home",
-    link: "/landing-page",
+    link: "/storic-profile",
   },
   {
     icon: TopicIcon,
@@ -20,11 +21,6 @@ export const navMenu = [
     icon: InterviewIcon,
     label: "Nuovo colloquio",
     link: "/interview-process",
-  },
-  {
-    icon: ProfileIcon,
-    label: "Profilo",
-    link: "/storic-profile",
   },
 
   {

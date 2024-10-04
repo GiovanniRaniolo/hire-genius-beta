@@ -13,7 +13,6 @@ import Loading from "@/components/Atoms/Loading/Loading";
 
 // STYLE
 import style from "./login.module.scss";
-// import LoginHeroSM from "@/../public/login-hero.png";
 import LoginHeroLG from "@/../public/hero/hero.png";
 
 const Login = () => {
@@ -28,7 +27,7 @@ const Login = () => {
       await loginWithGoogle();
       console.log("Login con Google effettuato con successo!");
       setIsLoading(false);
-      router.push("/landing-page");
+      router.push("/storic-profile");
     } catch (err) {
       setIsLoading(false);
       console.error(err);
