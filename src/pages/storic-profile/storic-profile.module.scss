@@ -3,11 +3,6 @@
   @include flex-column(var(--gap-sm));
   padding: var(--page-padding);
 
-  // {
-  //   padding-left: 0;
-  //   padding-right: 0;
-  // }
-
   .container {
     @include flex-column(var(--gap-lg));
     padding: 0;
@@ -28,12 +23,6 @@
         color: var(--tertiary);
       }
     }
-
-    // @media (min-width: 767px) {
-    //   flex-direction: row;
-    //   column-gap: var(--page-padding);
-    //   align-items: start;
-    // }
   }
 
   .header {
@@ -101,9 +90,7 @@
     @media (min-width: 767px) {
       flex-direction: row;
       column-gap: var(--page-padding);
-      // align-items: flex-start;
       justify-content: flex-start;
-
       flex-wrap: wrap;
     }
   }

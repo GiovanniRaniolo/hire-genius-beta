@@ -131,7 +131,7 @@ export const interviewFormOptions = {
 export const customFormLabels = {
   title: "Nuovo Argomento",
   topicLabel: "Argomento",
-  topicPlaceholder: "Inserisci qualsiasi argomento",
+  topicPlaceholder: "Inserisci il tema del nuovo Test*",
   level: "Livello",
   numberOfQuestionsLabel: "Numero di domande",
   testDurationLabel: "Durata del test",

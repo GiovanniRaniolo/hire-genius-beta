@@ -7,34 +7,32 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 const Hero = () => {
-	const router = useRouter();
+  const router = useRouter();
 
-	const handleButton = () => {
-		router.push("/#features");
-	};
+  const handleButton = () => {
+    router.push("/#features");
+  };
 
-	return (
-		<>
-			<section className={style.hero}>
-				<div className={style.heroContainer}>
-					<div className={style.heroContent}>
-						<h1>
-							Ti aiuta ad
-							<span className={style.wrappedText1}> eccellere</span>
-							<br />
-							per affrontare <span className={style.wrappedText2}> test e colloqui </span> <br />
-							come un professionista
-						</h1>
-						<p>{heroLabels.subtitle}</p>
+  return (
+    <section className={style.hero}>
+      <div className={style.heroContainer}>
+        <div className={style.heroContent}>
+          <h1>
+            Ti aiuta ad
+            <span className={style.wrappedText1}> eccellere</span>
+            <br />
+            per affrontare <span className={style.wrappedText2}> test e colloqui </span> <br />
+            come un professionista
+          </h1>
+          <p>{heroLabels.subtitle}</p>
 
-						<CtaButton onClick={handleButton} className='ctaA' label='Scopri di più' />
-					</div>
+          <CtaButton onClick={handleButton} className="ctaA" label="Scopri di più" />
+        </div>
 
-					<Image className={style.heroImg} src={heroImg} alt='Hero' width={444} height={585} priority={true} />
-				</div>
-			</section>
-		</>
-	);
+        <Image className={style.heroImg} src={heroImg} alt="Hero" width={444} height={585} priority={true} />
+      </div>
+    </section>
+  );
 };
 
 export default Hero;

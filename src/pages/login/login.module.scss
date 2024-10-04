@@ -47,11 +47,14 @@
 
       .header {
         @include flex-column(var(--gap-md));
-        margin-bottom: var(--gap-sm);
+        margin-bottom: var(--gap-md);
+        align-items: flex-end;
+        width: 100%;
 
         h1 {
           color: var(--accent);
           font-weight: var(--fw-bold);
+          font-size: var(--fs-xl);
         }
 
         h2 {
@@ -59,7 +62,7 @@
           font-weight: var(--fw-bold);
 
           span {
-            margin-left: 2px;
+            margin-left: 6px;
             font-size: var(--fs-sm);
             color: var(--tertiary);
           }
@@ -77,11 +80,13 @@
         .registerLink {
           font-weight: var(--fw-bold);
           transition: all 0.35s ease;
+          text-decoration: underline;
 
           &:active,
           &:focus,
           &:hover {
-            color: var(--dark);
+            color: var(--tertiary);
+            text-decoration: none;
           }
         }
       }

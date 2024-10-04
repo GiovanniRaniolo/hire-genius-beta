@@ -21,14 +21,23 @@
     text-align: right;
     cursor: pointer;
     text-decoration: underline;
+    padding-bottom: var(--elements-padding);
 
     transition: all 0.35s ease;
     &:active,
     &:focus,
     &:hover {
-      color: var(--dark);
+      text-decoration: none;
       font-weight: var(--fw-bold);
     }
+  }
+
+  .privacyInfo {
+    color: var(--light);
+    font-size: var(--fs-sm);
+    padding: var(--elements-padding);
+    padding-top: 9px;
+    border-top: 1px solid var(--lightGrey);
   }
 
   mark.invalid {

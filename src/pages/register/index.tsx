@@ -4,22 +4,37 @@
 import RegisterForm from "@/components/Organism/RegisterForm/RegisterForm";
 
 // STYLE
-import style from "./register.module.scss";
+import style from "../login/login.module.scss";
+import Image from "next/image";
+import LoginHeroLG from "@/../public/hero/hero.png";
+import Link from "next/link";
 
 const Register = () => {
-	return (
-		<main className={style.main}>
-			<header className={style.header}>
-				<h2 className={style.sectionTitle}>Registrati</h2>
-			</header>
+  return (
+    <section className={style.login}>
+      <div className={style.loginContainer}>
+        <Image className={style.heroImg} src={LoginHeroLG} alt="Hero image" width={444} height={585} priority={true} />
 
-			<RegisterForm />
+        <main className={style.main}>
+          <header className={style.header}>
+            <h2>
+              Registrati | <span>Mettiti subito in gioco!</span>
+            </h2>
+          </header>
 
-			<p className={style.privacyInfo}>I tuoi dati saranno protetti secondo GDPR e usati soltanto per personalizzare la tua esperienza</p>
+          <RegisterForm />
+          {/* {error && <p>{error}</p>} */}
 
-			{/* {error && <p>{error}</p>} */}
-		</main>
-	);
+          <p className={style.register}>
+            Hai già un account?{" "}
+            <Link className={style.registerLink} href="/login">
+              Accedi
+            </Link>
+          </p>
+        </main>
+      </div>
+    </section>
+  );
 };
 
 export default Register;

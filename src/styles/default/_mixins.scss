@@ -104,9 +104,23 @@
   color: var(--white);
   border-radius: var(--border-radius);
   @include effect-shadow;
+  // display: flex;
+  // justify-content: center;
 
   cursor: pointer;
   @include flex-center;
+
+  .icon {
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    img {
+      width: 24px;
+      position: absolute;
+      transform: translate(-36px, -12px);
+    }
+  }
 
   &:not(.round) {
     padding: var(--elements-padding);
@@ -186,7 +200,8 @@
   textarea:not(:placeholder-shown):valid,
   input:not(:placeholder-shown):valid,
   input:focus:user-valid {
-    outline: 2px solid var(--secondary);
+    outline: 2px solid var(--tertiary);
+    // color: var(--dark);
   }
 
   textarea:focus:invalid,
@@ -196,6 +211,12 @@
 
   textarea:focus:placeholder-shown:invalid,
   input:focus:invalid {
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(--error);
+  }
+
+  input .invalid {
+    input:focus:invalid {
+      outline: 2px solid var(--error);
+    }
   }
 }

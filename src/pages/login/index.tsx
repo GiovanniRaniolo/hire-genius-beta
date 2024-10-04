@@ -15,7 +15,6 @@ import Loading from "@/components/Atoms/Loading/Loading";
 import style from "./login.module.scss";
 // import LoginHeroSM from "@/../public/login-hero.png";
 import LoginHeroLG from "@/../public/hero/hero.png";
-import React from "react";
 
 const Login = () => {
   const { loginWithGoogle } = useAuth();
@@ -41,34 +40,31 @@ const Login = () => {
   }
 
   return (
-    <>
-      <section className={style.login}>
-        <div className={style.loginContainer}>
-          <Image className={style.heroImg} src={LoginHeroLG} alt="Hero image" width={444} height={585} priority={true} />
+    <section className={style.login}>
+      <div className={style.loginContainer}>
+        <Image className={style.heroImg} src={LoginHeroLG} alt="Hero image" width={444} height={585} priority={true} />
 
-          <main className={style.main}>
-            <div className={style.header}>
-              <h1>HireGenius</h1>
-              <h2>
-                Login/
-                <span>Accedi e testa le tue competenze!</span>
-              </h2>
-            </div>
+        <main className={style.main}>
+          <div className={style.header}>
+            <h1>HireGenius</h1>
+            <h2>
+              Login |<span>Accedi e testa le tue competenze!</span>
+            </h2>
+          </div>
 
-            <LoginForm />
+          <LoginForm />
 
-            <CtaButton label="Accedi con Google" className="ctaB" onClick={handleGoogleLogin} />
+          <CtaButton label="Accedi con Google" className="ctaB" icon="/icons/google.svg" onClick={handleGoogleLogin} />
 
-            <p className={style.register}>
-              Non hai un account?{" "}
-              <Link className={style.registerLink} href="/register">
-                Registrati
-              </Link>
-            </p>
-          </main>
-        </div>
-      </section>
-    </>
+          <p className={style.register}>
+            Non hai un account?{" "}
+            <Link className={style.registerLink} href="/register">
+              Registrati
+            </Link>
+          </p>
+        </main>
+      </div>
+    </section>
   );
 };
 

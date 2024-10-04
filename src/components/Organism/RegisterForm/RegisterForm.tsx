@@ -14,26 +14,41 @@ const RegisterForm = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const [error, setError] = useState("");
   const router = useRouter();
+
+  // Validazione email
+  const isEmailValid = (email: string) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  };
+
+  // Validazione password
+  const isPasswordValid = (password: string) => {
+    return password.length >= 6; // Controlla che la password sia lunga almeno 6 caratteri
+  };
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
-    // Controlla che userName non sia vuoto
     if (!userName) {
       setError("Il campo Username è obbligatorio.");
       return;
     }
 
+    if (!isEmailValid(email)) {
+      setError("Inserisci un'email valida.");
+      return;
+    }
+
+    if (!isPasswordValid(password)) {
+      setError("La password deve essere di almeno 6 caratteri.");
+      return;
+    }
+
     try {
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
       console.log("Utente registrato con successo:", user);
@@ -65,16 +80,11 @@ const RegisterForm = () => {
         value={userName}
         onChange={(e) => setUserName(e.target.value)}
         required={true}
+        placeholder="Inserisci il tuo nome utente"
+        minLength={3}
       />
 
-      <InputBox
-        type="email"
-        name="userEmail"
-        label="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required={true}
-      />
+      <InputBox type="email" name="userEmail" label="Email" value={email} onChange={(e) => setEmail(e.target.value)} required={true} placeholder="Inserisci la tua email" />
 
       <InputBox
         type="password"
@@ -83,11 +93,14 @@ const RegisterForm = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         required={true}
+        placeholder="Scegli una password di almeno 6 caratteri"
+        minLength={6}
       />
 
       {error && <mark className={style.invalid}>{error}</mark>}
 
-      <CtaButton label="Registrati" className="ctaA" type="submit" />
+      <CtaButton label="Registrati" className="ctaA" type="submit" disabled={!isEmailValid(email) || !isPasswordValid(password)} />
+      <p className={style.privacyInfo}>*I tuoi dati saranno protetti secondo GDPR e usati soltanto per personalizzare la tua esperienza.</p>
     </form>
   );
 };

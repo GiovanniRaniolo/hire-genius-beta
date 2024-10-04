@@ -7,12 +7,12 @@ import style from "./InputBox.module.scss";
 import { InputBoxProps } from "@/interfaces/interfaces";
 
 const InputBox = (props: InputBoxProps) => {
-  const { type, name, label, value, placeholder, onChange, required } = props;
+  const { type, name, label, value, placeholder, minLength, onChange, required } = props;
 
   return (
     <div className={style.inputBox}>
       <Label label={label} name={name} />
-      <Input type={type} name={name} label={label} value={value} placeholder={placeholder} onChange={onChange} required={required} />
+      <Input type={type} name={name} label={label} value={value} placeholder={placeholder} onChange={onChange} required={required} minLength={minLength} />
     </div>
   );
 };

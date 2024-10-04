@@ -3,7 +3,7 @@
 @import "./default/index.scss";
 
 :root {
-  --border-radius: 20px;
+  --border-radius: 18px;
   --elements-padding: 18px;
   --page-padding: 36px;
 
@@ -21,6 +21,7 @@
   --fs-sm: 12px;
   --fs-md: 16px;
   --fs-lg: 20px;
+  --fs-xl: 28px;
 
   // COLORI
   --accent: #f9dc5c; //cta, timer, badge, risultati
@@ -80,6 +81,10 @@ body {
     text-decoration: none;
   }
 
+  a:hover {
+    color: var(--tertiary);
+  }
+
   button {
     box-shadow: none;
     border: none;
@@ -92,7 +97,7 @@ body {
   }
 
   ::placeholder {
-    color: var(--dark);
+    color: var(--light);
   }
 
   ul {
