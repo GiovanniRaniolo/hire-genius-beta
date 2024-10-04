@@ -41,6 +41,7 @@ const NewTopic: React.FC<TopicFormProps> = ({ onSubmit }) => {
               value={topic}
               placeholder={customFormLabels.topicPlaceholder}
               onChange={(e) => setTopic(e.target.value)}
+              minLength={3}
             />
 
             <SelectBox

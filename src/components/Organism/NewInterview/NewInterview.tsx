@@ -41,6 +41,7 @@ const NewInterview: React.FC<TopicFormProps> = ({ onSubmit }) => {
               value={interview}
               placeholder={interviewFormLabels.interviewPlaceholder}
               onChange={(e) => setInterview(e.target.value)}
+              minLength={3}
             />
 
             <SelectBox
