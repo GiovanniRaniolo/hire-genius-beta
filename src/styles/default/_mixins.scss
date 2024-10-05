@@ -59,9 +59,10 @@
   @media (min-width: 767px) {
     max-width: 900px;
     @include flex-center;
+    justify-content: flex-start;
   }
 
-  @media (min-height: 767px) {
+  @media (min-height: 1024px) {
     overflow: hidden; // Evita lo scroll
   }
   .container {
