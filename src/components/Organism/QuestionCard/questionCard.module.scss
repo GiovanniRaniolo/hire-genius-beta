@@ -1,6 +1,10 @@
 .main {
   @include main;
 
+  @media (min-width: 767px) {
+    justify-content: center;
+  }
+
   label {
     font-size: var(--fs-lg);
     padding-bottom: 12px;
@@ -9,11 +13,10 @@
   .container {
     @include flex-column(var(--gap-lg));
 
-    @media (min-width: 1025px) {
-      flex-direction: row;
-      column-gap: var(--page-padding);
-      align-items: start;
-      min-height: 600px;
+    @media (min-width: 767px) {
+      justify-content: center;
+      // align-items: center;
+      min-height: 80dvh;
 
       & > div {
         width: 50%;
