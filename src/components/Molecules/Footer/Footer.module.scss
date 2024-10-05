@@ -1,12 +1,23 @@
 .footer {
   background-color: var(--dark);
   color: var(--light);
+  transition: transform 0.4s ease-in-out; /* Animazione per far scorrere il footer */
+  transform: translateY(100%); /* Nascondi il footer inizialmente */
+  position: fixed;
+  bottom: 0; /* Posiziona il footer in basso */
+  height: 90px;
+  width: 100%;
+  z-index: 10; /* Porta il footer in cima */
+
+  &.visible {
+    transform: translateY(0px); /* Mostra il footer */
+  }
 
   .footerContainer {
     min-height: fit-content;
     padding: var(--page-padding);
-    padding-top: var(--elements-padding);
-    padding-bottom: var(--elements-padding);
+    padding-top: 16px;
+
     @include flex-column(var(--gap-lg));
     justify-content: space-between;
     align-items: center;
@@ -17,13 +28,17 @@
     }
 
     @media (min-width: 767px) {
+      @include effect-shadow-top;
       margin: 0 auto;
-      max-width: 1300px;
       flex-direction: row;
       text-align: start;
+      width: 100%;
     }
 
     .footerHeader {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       h4 {
         font-size: var(--fs-lg);
       }
@@ -31,7 +46,22 @@
 
     .footerHeader,
     nav {
-      @include flex-column(var(--gap-sm));
+      @include flex(var(--gap-sm));
+    }
+
+    .footerText {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 8px;
+      h4 {
+        color: var(--accent);
+        font-size: var(--fs-md);
+      }
+      p {
+        color: var(--tertiary);
+        font-size: var(--fs-sm);
+      }
     }
 
     .footerHeader,

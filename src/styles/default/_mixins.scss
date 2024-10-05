@@ -30,6 +30,26 @@
   }
 }
 
+@mixin effect-shadow-top {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px -2px 4px, rgba(0, 0, 0, 0.3) 0px -7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+  &:after {
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+  }
+}
+
+@mixin effect-shadow-bottom {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px 3px 0px inset;
+
+  &:after {
+    transform: rotate(-3deg);
+    right: 10px;
+    left: auto;
+  }
+}
+
 @mixin main {
   width: 100dvw;
   height: 100vh;
@@ -66,10 +86,10 @@
   }
   p {
     color: var(--white);
-    // padding: var(--elements-padding);
-    // padding-top: 0;
+    font-size: var(--fs-sm);
     padding-bottom: var(--elements-padding);
     padding-right: var(--elements-padding);
+
     span {
       color: var(--tertiary);
       font-size: var(--fs-lg);

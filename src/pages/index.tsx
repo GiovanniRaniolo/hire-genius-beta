@@ -4,21 +4,22 @@ import Hero from "@/components/Molecules/Hero/Hero";
 import Features from "@/components/Molecules/Features/Features";
 import Interviewers from "@/components/Molecules/Interviewers/Interviewers";
 import ChiSiamo from "@/components/Molecules/ChiSiamo/ChiSiamo";
+import React from "react";
 
 export default function Home() {
-	return (
-		<>
-			<Head>
-				<title>{headLabels.title}</title>
-				<meta name='description' content='Skillup - Enhance your skills with personalized quizzes and interviews.' />
-				<link rel='icon' href='/favicon.ico' />
-			</Head>
-			<main>
-				<Hero />
-				<Features />
-				<Interviewers />
-				<ChiSiamo />
-			</main>
-		</>
-	);
+  return (
+    <>
+      <Head>
+        <title>{headLabels.title}</title>
+        <meta name="description" content="Skillup - Enhance your skills with personalized quizzes and interviews." />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main>
+        <Hero />
+        <Features />
+        <Interviewers />
+        <ChiSiamo />
+      </main>
+    </>
+  );
 }

@@ -7,9 +7,11 @@
     display: none;
   }
 
-  @media (min-width: 767px) {
+  @media (min-width: 1025px) {
+    @include effect-shadow-bottom;
     position: fixed;
-    height: 100px;
+    transform: translate(0, -12px);
+    height: 90px;
     width: 100%;
     background-color: var(--dark);
     color: var(--accent);
@@ -38,6 +40,7 @@
           padding: calc(var(--elements-padding) / 2) var(--elements-padding);
           border-radius: var(--border-radius);
           font-weight: var(--fw-bold);
+          font-size: var(--fs-sm);
         }
 
         & a:hover {
