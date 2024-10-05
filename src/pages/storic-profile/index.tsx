@@ -69,10 +69,6 @@ const UserProfile = () => {
         <div className={style.container}>
           {!selectedInterviewSession ? (
             <>
-              {/* <header className={style.header}>
-								<h2 className={style.sectionTitle}>Profilo</h2>
-							</header> */}
-
               <header className={style.header}>
                 <div className={style.userInfo}>
                   <div className={style.NameAndMail}>
@@ -87,6 +83,11 @@ const UserProfile = () => {
                 </div>
               </header>
 
+              <p>
+                Simula un <span>colloquio</span> di lavoro o cimentati con un approccio mirato selezionando un nuovo <span>argomento</span>. <br />
+                <br />
+                Rispondi alle domande e ricevi feedback per migliorare le tue prestazioni!
+              </p>
               <div className={style.headerButtons}>
                 <Link href="./topic-process">
                   <button>

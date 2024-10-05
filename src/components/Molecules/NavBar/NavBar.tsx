@@ -3,7 +3,7 @@ import Link from "next/link";
 import style from "./NavBar.module.scss";
 import { navMenu, footerMenu } from "@/constants/menuData";
 import ActionButton from "@/components/Atoms/Buttons/ActionButton";
-import MenuIcon from "@/../public/icons/menu-icon.png";
+import MenuIcon from "/public/icons/menu-icon.png";
 import Image from "next/image";
 import { useAuth } from "@/context/AuthContext";
 
@@ -43,13 +43,15 @@ const NavBar = () => {
                 </Link>
               </li>
             ))}
-            <p>@2024 Interviewer</p>
+            <p>@2024 HireGenius</p>
           </ul>
         </nav>
       )}
 
       <nav className={style.navbar}>
-        <h4>HireGenius</h4>
+        <Link href="/">
+          <h4>HireGenius</h4>
+        </Link>
         <ul className={style.menuList}>
           {filteredNavMenu.map((item) => (
             <li key={item.label}>

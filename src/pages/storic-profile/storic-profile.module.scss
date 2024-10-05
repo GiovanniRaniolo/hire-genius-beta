@@ -14,6 +14,15 @@
       padding-top: 60px;
       padding-bottom: 100px;
     }
+    p {
+      color: var(--white);
+      font-weight: 200;
+      line-height: 18px;
+      span {
+        color: var(--tertiary);
+        font-weight: var(--fw-bold);
+      }
+    }
 
     .recentTests {
       color: var(--white);
