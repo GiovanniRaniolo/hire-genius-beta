@@ -2,15 +2,21 @@
   @include main;
 
   @media (min-width: 767px) {
+    @include flex-center;
+    justify-content: center;
     align-items: stretch;
     // overflow: visible;
+  }
+
+  @media (min-width: 1025px) {
+    // padding-top: 300px;
+    height: 150dvh;
   }
 
   .container {
     @include flex-column(var(--gap-sm));
     justify-content: center;
     @media (min-width: 1024px) {
-      padding-top: 100px;
       align-items: center;
     }
 
@@ -55,6 +61,15 @@
           color: var(--white);
           background: var(--accent);
 
+          h3 {
+            color: var(--tertiary);
+          }
+
+          p {
+            font-weight: 300;
+            padding-bottom: 9px;
+          }
+
           & > div:first-child {
             @include flex-column(var(--gap-sm));
 
@@ -85,8 +100,8 @@
           &:focus,
           &:hover,
           &.selected {
-            background-color: var(--light);
-            color: var(--dark);
+            background-color: var(--fill);
+            color: var(--white);
           }
 
           &.selected {

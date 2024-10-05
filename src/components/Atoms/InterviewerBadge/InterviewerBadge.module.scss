@@ -1,24 +1,26 @@
 .badge {
-	padding: 0 var(--elements-padding);
-	border-radius: var(--border-radius);
-	color: var(--dark);
-	font-weight: var(--fw-bold);
-	text-transform: uppercase;
+  padding: 0 var(--elements-padding);
+  border-radius: var(--border-radius);
+  color: var(--dark);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
 
-	&.semplice {
-		background-color: var(--secondary);
-	}
+  &.semplice {
+    background-color: var(--secondary);
+    color: var(--white);
+  }
 
-	&.equo {
-		background-color: var(--accent);
-	}
+  &.equo {
+    background-color: var(--accent);
+  }
 
-	&.arduo {
-		background-color: var(--tertiary);
-	}
+  &.arduo {
+    background-color: var(--tertiary);
+    color: var(--white);
+  }
 
-	&.avanzato {
-		background-color: var(--dark);
-		color: var(--light);
-	}
+  &.avanzato {
+    background-color: var(--error);
+    color: var(--white);
+  }
 }

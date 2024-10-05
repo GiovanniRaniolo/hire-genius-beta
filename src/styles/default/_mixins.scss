@@ -60,6 +60,7 @@
     max-width: 900px;
     @include flex-center;
     justify-content: flex-start;
+    // padding-top: 300px;
   }
 
   @media (min-height: 1024px) {

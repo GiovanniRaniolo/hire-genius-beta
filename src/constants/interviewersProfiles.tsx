@@ -1,16 +1,16 @@
-import Avatar1 from "@/../public/avatar1.png";
-import Avatar2 from "@/../public/avatar2.png";
-import Avatar3 from "@/../public/avatar3.png";
-import Avatar4 from "@/../public/avatar4.png";
-import Avatar5 from "@/../public/avatar5.png";
-import Avatar6 from "@/../public/avatar6.png";
+import Avatar1 from "/public/avatar1.png";
+import Avatar2 from "/public/avatar2.png";
+import Avatar3 from "/public/avatar3.png";
+import Avatar4 from "/public/avatar4.png";
+import Avatar5 from "/public/avatar5.png";
+import Avatar6 from "/public/avatar6.png";
 
 export const profiles = [
   {
     avatarSrc: Avatar1,
     name: "Giulia",
     value: "giulia",
-    shortBio: "Solare ed empatica. Ti farà sentire a tuo agio.",
+    shortBio: "Solare e gentile, ti farà sentire a tuo agio",
     longBio:
       "Solare ed empatica, mette gli altri a proprio agio e mantiene un livello semplice e diretto di domande, come: -Puoi parlarmi un po’ di te?- o -Perché ti piacerebbe lavorare qui?-. Si interessa alle motivazioni personali e alle qualità individuali.",
     level: "semplice",
@@ -20,7 +20,7 @@ export const profiles = [
     avatarSrc: Avatar2,
     name: "Davide",
     value: "Davide",
-    shortBio: "Analitico e diretto. Indagherà come affronti le sfide.",
+    shortBio: "Diretto, analizza come superi sfide.",
     longBio:
       "Analitico e diretto, con uno stile di comunicazione chiaro e conciso. Le sue domande, come: -Puoi descrivermi una situazione in cui hai affrontato una difficoltà sul lavoro e come l’hai risolta?- riflettono il desiderio di comprendere come gli altri si confrontano con sfide simili e quale approccio adottano per ottenere risultati concreti.",
     level: "semplice",
@@ -60,7 +60,7 @@ export const profiles = [
     avatarSrc: Avatar6,
     name: "Elena",
     value: "elena",
-    shortBio: "Una leader capace di vedere oltre l’immediato.",
+    shortBio: "Una leader che vede oltre l’immediato.",
     longBio:
       "Una leader capace di vedere oltre l’immediato e di sviluppare strategie che abbiano un impatto duraturo e significativo. Quando chiede di descrivere una decisione impopolare e come è stata gestita dimostra la sua comprensione del fatto che le decisioni difficili sono inevitabili e che il modo in cui vengono affrontate è cruciale per il successo.",
     level: "avanzato",

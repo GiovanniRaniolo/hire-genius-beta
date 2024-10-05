@@ -1,21 +1,23 @@
 .footer {
   background-color: var(--dark);
   color: var(--light);
-  transition: transform 0.4s ease-in-out; /* Animazione per far scorrere il footer */
-  transform: translateY(100%); /* Nascondi il footer inizialmente */
+  transition: transform 0.4s ease-in-out;
+  transform: translateY(100%);
   position: fixed;
-  bottom: 0; /* Posiziona il footer in basso */
+  bottom: 0;
   height: 90px;
   width: 100%;
-  z-index: 10; /* Porta il footer in cima */
+  z-index: 10;
 
   &.visible {
-    transform: translateY(0px); /* Mostra il footer */
+    transform: translateY(0px);
   }
 
   .footerContainer {
     min-height: fit-content;
     padding: var(--page-padding);
+    padding-left: 68px;
+    padding-right: 68px;
     padding-top: 16px;
 
     @include flex-column(var(--gap-lg));

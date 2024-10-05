@@ -1,12 +1,12 @@
 .progressBar {
-	height: 8px;
-	background-color: var(--light);
-	border-radius: var(--border-radius);
+  height: 8px;
+  background-color: var(--light);
+  border-radius: var(--border-radius);
 
-	.progress {
-		height: 100%;
-		background-color: var(--primary);
-		border-radius: var(--border-radius);
-		transition: width 0.3s ease-in-out;
-	}
+  .progress {
+    height: 100%;
+    background-color: var(--tertiary);
+    border-radius: var(--border-radius);
+    transition: width 0.3s ease-in-out;
+  }
 }
