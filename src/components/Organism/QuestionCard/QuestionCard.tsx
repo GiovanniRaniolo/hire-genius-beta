@@ -77,7 +77,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({ role, totalQuestions, quest
 
             <div className={style.buttons}>
               {currentQuestionIndex > 0 && <ActionButton icon={PrevIcon} onClick={handlePrevious} className="round" type="button" />}
-              <ActionButton icon={NextIcon} className="round" type="submit" />{" "}
+              <ActionButton icon={NextIcon} className="round" type="submit" disabled={currentResponse.length < 2} />{" "}
             </div>
           </form>
         </div>

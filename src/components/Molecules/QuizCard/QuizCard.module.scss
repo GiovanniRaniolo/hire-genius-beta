@@ -1,6 +1,6 @@
 .quizCardContainer {
   @include base-element;
-  @include flex-column(var(--gap-md));
+  @include flex-column(var(--gap-sm));
   @include card-shadow;
   padding: 20px;
   min-width: 86vw;
@@ -48,8 +48,8 @@
 
     .quizCardImgContainer {
       position: relative;
-      height: 60px;
-      width: 60px;
+      height: 64px;
+      width: 64px;
       background-color: var(--light);
       border-radius: 50%;
       padding: 10px;
@@ -60,8 +60,8 @@
 
       img {
         border-radius: 50%;
-        width: 150%;
-        height: 150%;
+        width: 140%;
+        height: 140%;
         object-fit: cover;
       }
 
