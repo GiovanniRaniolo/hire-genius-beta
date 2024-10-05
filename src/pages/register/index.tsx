@@ -6,7 +6,7 @@ import RegisterForm from "@/components/Organism/RegisterForm/RegisterForm";
 // STYLE
 import style from "../login/login.module.scss";
 import Image from "next/image";
-import LoginHeroLG from "@/../public/hero/hero.png";
+import LoginHeroLG from "@/../public/favicon.svg";
 import Link from "next/link";
 
 const Register = () => {

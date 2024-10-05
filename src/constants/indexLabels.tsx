@@ -1,5 +1,5 @@
 export const headLabels = {
-  title: "Interviewer - Simulazioni di Test e Colloqui",
+  title: "HireGenius - Mettiti alla prova!",
 } as const;
 
 export const heroLabels = {
@@ -15,20 +15,16 @@ export const interviewersLabels = {
 } as const;
 
 export const featureLabels = {
-  title: "Le nostre features",
+  title: "Features",
   description: `Affronta test e colloqui con sicurezza grazie a un sistema completo che ti offre esperienze di apprendimento personalizzate, simulate e arricchite da suggerimenti intelligenti. Sviluppa le tue abilità in modo mirato e efficace!`,
-  quizPersonalized: "Quiz Personalizzati",
+  quizPersonalized: "Test Personalizzati",
   quizBadge: "Quiz su misura per i tuoi interessi e il tuo livello di competenza.",
   simulatedInterviews: "Interviste Simulate",
-  simulatedBadge: "Esercitati con colloqui reali e ricevi feedback immediati.",
+  simulatedBadge: "Esercitati con colloqui realistici e ricevi feedback immediati.",
   aiFeedback: "Suggerimenti Potenziati dall'AI",
-  aiBadge: "Migliora con feedback e suggerimenti potenziati dall'AI.",
-  start: "Provale",
+  aiBadge: "Migliora con feedback e suggerimenti su qualsiasi argomento.",
+  start: "Prova adesso!",
 } as const;
-
-//  Sviluppa le tue competenze con quiz su misura, progettati per adattarsi ai tuoi interessi e al tuo livello di preparazione.
-//  Esercitati con colloqui realistici e ricevi feedback immediati per migliorare la tua performance e aumentare la tua sicurezza.
-// Ottieni feedback dettagliati e suggerimenti pratici grazie all'intelligenza artificiale, per affinare ulteriormente le tue abilità.
 
 export const footerLabels = {
   title: "HireGenius",

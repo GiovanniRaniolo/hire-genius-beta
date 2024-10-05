@@ -2,7 +2,7 @@
   @include main;
   .loginContainer {
     min-height: 100dvh;
-    @include flex-column(var(--gap-md));
+    @include flex-column(0px);
     justify-content: center;
 
     @media (min-width: 767px) {
@@ -13,20 +13,24 @@
       justify-content: center;
       align-items: center;
     }
-
     .heroImg {
-      margin-top: var(--elements-padding);
-      width: 41%;
+      background: var(--dark);
+      margin-top: 0;
+      border-radius: 50%;
+      width: 46%;
       height: auto;
       align-self: end;
+      border-left: 4px dashed var(--tertiary);
+      margin-right: var(--elements-padding);
 
       @media (min-width: 767px) {
         margin-top: unset;
 
-        width: 30%;
+        width: 38%;
         align-self: unset;
+        border-left: unset;
+        border-right: 4px dashed var(--tertiary);
 
-        border-right: 4px dashed var(--dark);
         transform: scaleX(-1);
       }
     }

@@ -254,7 +254,7 @@
 
   textarea:focus:invalid,
   input:not(:placeholder-shown):invalid {
-    outline: 2px solid var(--tertiary);
+    outline: 2px solid var(--error);
   }
 
   textarea:focus:placeholder-shown:invalid,
@@ -269,7 +269,7 @@
   }
 
   textarea {
-    border: 2px solid var(--light); /* Impostazione del bordo di base */
+    border: 2px solid var(--dark); /* Impostazione del bordo di base */
 
     &:not(:placeholder-shown):invalid,
     &:focus:invalid {

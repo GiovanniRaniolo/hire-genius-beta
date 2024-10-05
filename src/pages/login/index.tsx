@@ -13,7 +13,7 @@ import Loading from "@/components/Atoms/Loading/Loading";
 
 // STYLE
 import style from "./login.module.scss";
-import LoginHeroLG from "@/../public/hero/hero.png";
+import LoginHeroLG from "@/../public/favicon.svg";
 
 const Login = () => {
   const { loginWithGoogle } = useAuth();
@@ -42,7 +42,6 @@ const Login = () => {
     <section className={style.login}>
       <div className={style.loginContainer}>
         <Image className={style.heroImg} src={LoginHeroLG} alt="Hero image" width={444} height={585} priority={true} />
-
         <main className={style.main}>
           <div className={style.header}>
             <h1>HireGenius</h1>

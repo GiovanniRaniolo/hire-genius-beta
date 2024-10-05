@@ -1,7 +1,6 @@
 import HomeIcon from "@/../public/icons/home.svg";
 import TopicIcon from "@/../public/icons/topic.svg";
 import InterviewIcon from "@/../public/icons/interview.svg";
-import ProfileIcon from "@/../public/icons/profile.png";
 import LogoutIcon from "@/../public/icons/logout.svg";
 import LoginIcon from "@/../public/icons/login.svg";
 // Icons from: https://www.svgrepo.com/collection/wave-oval-interface-icons/
@@ -46,7 +45,7 @@ export const footerMenu = [
   },
   {
     label: "Github",
-    link: "https://github.com/giusene/HireGenius",
+    link: "https://github.com/GiovanniRaniolo/hire-genius-beta",
   },
 ];
 
@@ -127,7 +126,7 @@ export const interviewFormOptions = {
 export const customFormLabels = {
   title: "Nuovo Argomento",
   topicLabel: "Argomento",
-  topicPlaceholder: "Inserisci il tema del nuovo Test*",
+  topicPlaceholder: "Inserisci il tema del nuovo Test",
   level: "Livello",
   numberOfQuestionsLabel: "Numero di domande",
   testDurationLabel: "Durata del test",
