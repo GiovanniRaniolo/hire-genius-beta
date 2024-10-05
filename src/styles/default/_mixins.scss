@@ -267,4 +267,21 @@
       outline: 2px solid var(--error);
     }
   }
+
+  textarea {
+    border: 2px solid var(--light); /* Impostazione del bordo di base */
+
+    &:not(:placeholder-shown):invalid,
+    &:focus:invalid {
+      border-color: var(--error); /* Imposta il bordo rosso quando non valido */
+    }
+
+    &:valid {
+      border-color: var(--tertiary); /* Cambia il bordo quando valido */
+    }
+
+    &:focus {
+      outline: 2px solid var(--light); /* Bordo quando in focus */
+    }
+  }
 }

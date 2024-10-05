@@ -48,6 +48,7 @@ export interface TextAreaProps {
   value: string;
   onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   required?: boolean;
+  minLength?: number;
 }
 
 // TextAreaBox
@@ -58,6 +59,7 @@ export interface TextAreaBoxProps {
   value: string;
   onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   required?: boolean;
+  minLength?: number;
 }
 
 // Loading

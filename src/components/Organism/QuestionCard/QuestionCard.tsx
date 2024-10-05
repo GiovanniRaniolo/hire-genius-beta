@@ -73,6 +73,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({ role, totalQuestions, quest
               value={currentResponse}
               onChange={handleInputChange}
               required={true}
+              minLength={2}
             />
 
             <div className={style.buttons}>
