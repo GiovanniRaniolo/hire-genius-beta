@@ -1,6 +1,7 @@
 .header {
   @include header;
-
+  align-items: flex-end;
+  padding-top: 46px;
   .avatarContainer {
     margin: 0 auto;
     display: flex;

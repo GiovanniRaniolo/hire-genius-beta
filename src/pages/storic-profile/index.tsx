@@ -123,12 +123,12 @@ const UserProfile = () => {
               <ResultsList evaluationResult={selectedInterviewSession.evaluationResult} interviewDetails={selectedInterviewSession.interviewDetails} />
             </>
           )}
+          {selectedInterviewSession ? (
+            <Link href={"/storic-profile"} className={style.linkBtn}>
+              <CtaButton label="Torna al profilo" className="ctaC" onClick={() => setSelectedInterviewSession(null)} />
+            </Link>
+          ) : null}
         </div>
-        {selectedInterviewSession ? (
-          <Link href={"/storic-profile"} className={style.linkBtn}>
-            <CtaButton label="Torna al profilo" className="ctaC" onClick={() => setSelectedInterviewSession(null)} />
-          </Link>
-        ) : null}
       </main>
     );
 };

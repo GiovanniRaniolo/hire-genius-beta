@@ -5,11 +5,15 @@
   background: none;
 
   transition: transform 0.8s ease;
+  h4 {
+    padding-bottom: 6px;
+    color: var(--secondary);
+  }
 
   &.selectedResultCard {
     transform: scale(1.05);
     margin: var(--gap-lg) 0;
-    border: 4px solid var(--dark);
+    border: 4px solid var(--light);
   }
 
   &.correct {
@@ -17,7 +21,7 @@
   }
   &.average {
     background-color: var(--average-bg);
-    color: var(--dark);
+    color: var(--white);
   }
   &.incorrect {
     background-color: var(--incorrect-bg);
