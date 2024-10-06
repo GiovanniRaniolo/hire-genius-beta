@@ -6,8 +6,8 @@
   }
 
   label {
-    font-size: var(--fs-lg);
-    padding-bottom: 12px;
+    font-size: var(--fs-md);
+    padding-bottom: 9px;
   }
 
   .container {
@@ -25,6 +25,9 @@
 
     .header {
       @include header;
+      h2 {
+        margin-bottom: 0;
+      }
     }
 
     .progress {

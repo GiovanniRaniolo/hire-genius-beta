@@ -107,12 +107,12 @@
   .sectionTitle {
     height: 40px;
     @include flex-center();
-    color: var(--white);
+    color: var(--tertiary);
     font-size: var(--fs-lg);
 
-    @media (min-width: 1025px) {
+    @media (min-width: 767px) {
       font-size: (var(--fs-lg));
-      display: block;
+      // display: block;
     }
   }
 }
