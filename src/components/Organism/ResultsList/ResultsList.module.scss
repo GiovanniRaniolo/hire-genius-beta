@@ -1,7 +1,14 @@
 .header {
   @include header;
   align-items: flex-end;
-  padding-top: 46px;
+  align-items: center;
+
+  p {
+    font-size: var(--fs-md);
+  }
+  @media (min-width: 767px) {
+    padding-top: 0;
+  }
   .avatarContainer {
     margin: 0 auto;
     display: flex;
@@ -13,9 +20,9 @@
 
     background-color: var(--accent);
     border-radius: 50%;
-    border: 5px solid var(--primary);
+    border: 5px solid var(--tertiary);
 
-    @media (min-width: 1025px) {
+    @media (min-width: 767px) {
       margin: 0;
     }
 
@@ -35,7 +42,7 @@
     text-align: center;
     color: var(--light);
 
-    @media (min-width: 1025px) {
+    @media (min-width: 767px) {
       text-align: start;
 
       p {
@@ -51,7 +58,7 @@
 
 .resultsList {
   @include flex-column(var(--gap-md));
-  @media (min-width: 1025px) {
+  @media (min-width: 767px) {
     width: 50%;
   }
 }

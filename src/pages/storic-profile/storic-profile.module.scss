@@ -10,13 +10,18 @@
   .container {
     @include flex-column(var(--gap-lg));
     padding: 0;
+    @media (min-width: 767px) {
+      // padding-top: 60px;
+      padding-bottom: 100px;
+      align-items: center;
+    }
     @media (min-width: 1025px) {
       padding-top: 60px;
-      padding-bottom: 100px;
     }
+
     p {
       color: var(--white);
-      line-height: 18px;
+      line-height: 16px;
       span {
         color: var(--tertiary);
         font-weight: var(--fw-bold);
@@ -45,8 +50,6 @@
 
   .header {
     @include header;
-    @media (min-width: 767px) {
-    }
   }
 
   color: var(--light);
@@ -55,7 +58,10 @@
     @include flex(var(--gap-md));
     justify-content: flex-end;
     padding-bottom: var(--gap-sm);
-    border-bottom: 1px solid var(--white);
+    border-bottom: 1px solid var(--medium);
+    @media (min-width: 767px) {
+      transform: translate(272px, 0);
+    }
 
     span {
       color: var(--white);

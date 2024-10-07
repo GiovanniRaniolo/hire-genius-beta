@@ -13,7 +13,7 @@ const ResultCard = (props: ResultCardProps) => {
   const { response, index } = props;
 
   const [showDetails, setShowDetails] = useState(false);
-  const statusIcon = `/icons/${response.answerStatus}.png`;
+  const statusIcon = `/icons/${response.answerStatus}.svg`;
 
   return (
     <div className={`${style.resultCard} ${style[response.answerStatus]} ${showDetails && style.selectedResultCard}`}>

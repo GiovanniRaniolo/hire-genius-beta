@@ -12,6 +12,7 @@ const ResultsList = (props: ResultsListProps) => {
       {interviewDetails && evaluationResult && (
         <>
           <header className={style.header}>
+            <h2>Risultati</h2>
             <h2 className={style.sectionTitle}>{interviewDetails.topic}</h2>
 
             <div className={style.avatarContainer}>
