@@ -5,6 +5,7 @@
 
   p {
     font-size: var(--fs-md);
+    // padding-bottom: 0;
   }
   @media (min-width: 767px) {
     padding-top: 0;
@@ -46,7 +47,7 @@
       text-align: start;
 
       p {
-        max-width: 60ch;
+        max-width: 45ch;
       }
     }
 

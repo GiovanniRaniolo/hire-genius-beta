@@ -90,7 +90,7 @@
     color: var(--white);
     font-size: var(--fs-sm);
     padding-bottom: var(--elements-padding);
-    padding-right: var(--elements-padding);
+    // padding-right: var(--elements-padding);
 
     span {
       color: var(--tertiary);
@@ -105,16 +105,15 @@
   }
 
   .sectionTitle {
-    height: 40px;
+    padding: 0 20px;
+    // height: 40px;
     @include flex-center();
     color: var(--tertiary);
     font-size: var(--fs-lg);
 
-    width: 100%; /* Imposta una larghezza */
-    white-space: nowrap; /* Impedisce la divisione del testo in più righe */
+    width: 100%;
 
-    text-overflow: ellipsis; /* Applica l'ellissi (...) al testo che eccede */
-    text-align: left;
+    text-align: center;
 
     @media (min-width: 767px) {
       font-size: (var(--fs-lg));

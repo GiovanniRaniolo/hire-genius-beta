@@ -8,7 +8,7 @@
   padding: var(--page-padding);
 
   .container {
-    @include flex-column(var(--gap-lg));
+    @include flex-column(var(--gap-md));
     padding: 0;
     @media (min-width: 767px) {
       // padding-top: 60px;
@@ -21,10 +21,15 @@
 
     p {
       color: var(--white);
-      line-height: 16px;
+      line-height: 20px;
+      text-align: left;
+
       span {
         color: var(--tertiary);
         font-weight: var(--fw-bold);
+      }
+      @media (min-width: 1024px) {
+        padding: 0 62px;
       }
     }
 
@@ -60,7 +65,7 @@
     padding-bottom: var(--gap-sm);
     border-bottom: 1px solid var(--medium);
     @media (min-width: 767px) {
-      transform: translate(272px, 0);
+      transform: translate(212px, 0);
     }
 
     span {
@@ -79,6 +84,7 @@
   .headerButtons {
     @include flex(var(--gap-md));
     justify-content: center;
+    padding-bottom: 12px;
     button {
       font-weight: var(--fw-bold);
       display: flex;
@@ -92,6 +98,14 @@
       font-size: var(--fs-md);
       padding: 10px 18px;
       border-radius: var(--border-radius);
+
+      &:active:not(:disabled),
+      &:focus:not(:disabled),
+      &:hover:not(:disabled) {
+        opacity: 0.9;
+        box-shadow: inset 4px 4px 3px 0px rgba(0, 0, 0, 0.2);
+        font-size: calc(var(--fs-md) - 1px);
+      }
     }
 
     a:nth-child(2) button {

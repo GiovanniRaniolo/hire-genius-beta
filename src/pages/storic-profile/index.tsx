@@ -85,8 +85,6 @@ const UserProfile = () => {
 
               <p>
                 Simula un <span>colloquio</span> di lavoro o cimentati con un approccio mirato selezionando un nuovo <span>argomento</span>. <br />
-                <br />
-                Rispondi alle domande e ricevi feedback per migliorare le tue prestazioni!
               </p>
               <div className={style.headerButtons}>
                 <Link href="./topic-process">
