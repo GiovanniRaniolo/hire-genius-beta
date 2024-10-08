@@ -8,6 +8,8 @@
   label {
     font-size: var(--fs-md);
     padding-bottom: 9px;
+    padding-left: 0px;
+    line-height: 22px;
   }
 
   .container {
@@ -25,16 +27,34 @@
 
     .header {
       @include header;
+      row-gap: var(--gap-md);
       h2 {
         margin-bottom: 0;
+      }
+      h3 {
+        color: var(--light);
+        text-align: center;
       }
     }
 
     .progress {
       @include flex-column(var(--gap-sm));
+      background-color: transparent;
+
       h3 {
-        color: var(--light);
         font-size: var(--fs-lg);
+        text-align: right;
+      }
+      .highlightedText {
+        background-color: var(--dark);
+        color: var(--tertiary);
+        display: inline-block;
+        padding: 4px 14px; // Spazio attorno al testo per creare il box
+        border-radius: var(--border-radius); // Bordo arrotondato per un aspetto più elegante
+
+        span {
+          color: var(--light);
+        }
       }
     }
 

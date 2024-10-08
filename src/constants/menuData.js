@@ -1,3 +1,4 @@
+import HeroIcon from "/public/icons/heroIcon.png";
 import HomeIcon from "@/../public/icons/home.svg";
 import TopicIcon from "@/../public/icons/topic.svg";
 import InterviewIcon from "@/../public/icons/interview.svg";
@@ -6,6 +7,11 @@ import LoginIcon from "@/../public/icons/login.svg";
 // Icons from: https://www.svgrepo.com/collection/wave-oval-interface-icons/
 
 export const navMenu = [
+  {
+    icon: HeroIcon,
+    label: "HireGenius",
+    link: "/",
+  },
   {
     icon: HomeIcon,
     label: "Home",

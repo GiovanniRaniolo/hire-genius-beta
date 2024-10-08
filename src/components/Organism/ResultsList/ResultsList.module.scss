@@ -3,8 +3,13 @@
   align-items: flex-end;
   align-items: center;
 
+  h2 {
+    color: var(--light);
+  }
+
   p {
     font-size: var(--fs-md);
+    text-align: left;
     // padding-bottom: 0;
   }
   @media (min-width: 767px) {
@@ -47,7 +52,7 @@
       text-align: start;
 
       p {
-        max-width: 45ch;
+        max-width: 50ch;
       }
     }
 

@@ -184,10 +184,10 @@ const InterviewProcess = () => {
         <main className={style.main}>
           <div className={style.container}>
             <ResultsList evaluationResult={evaluationResult} interviewDetails={interviewDetails} />
+            <Link href={"/landing-page"} className={style.linkBtn}>
+              <CtaButton label="Torna alla home" className="ctaC" />
+            </Link>
           </div>
-          <Link href={"/landing-page"} className={style.linkBtn}>
-            <CtaButton label="Torna alla home" className="ctaC" />
-          </Link>
         </main>
       )}
     </>

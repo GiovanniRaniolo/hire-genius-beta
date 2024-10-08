@@ -1,35 +1,38 @@
 .main {
-	@include main;
-	padding: var(--page-padding);
-	@include flex-column(var(--gap-md));
+  @include main;
+  padding: var(--page-padding);
+  @include flex-column(var(--gap-md));
 
-	@media (min-width: 1025px) {
-		padding-left: 0;
-		padding-right: 0;
-	}
+  @media (min-width: 1025px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-	.container {
-		@include flex-column(var(--gap-lg));
-		padding: 0;
+  .container {
+    @include flex-column(var(--gap-lg));
+    padding: 0;
 
-		@media (min-width: 1025px) {
-			flex-direction: row;
-			column-gap: var(--page-padding);
+    @media (min-width: 767px) {
+      flex-direction: column;
+      column-gap: var(--page-padding);
+      align-items: center;
+      padding-top: 60px;
 
-			align-items: stretch;
-		}
-	}
+      // align-items: stretch;
+    }
+  }
 
-	.linkBtn {
-		width: 100%;
+  .linkBtn {
+    width: 100%;
+    padding-bottom: 36px;
 
-		@media (min-width: 1025px) {
-			width: unset;
-		}
+    @media (min-width: 767px) {
+      width: unset;
+    }
 
-		button {
-			@include button;
-			width: 100%;
-		}
-	}
+    button {
+      @include button;
+      width: 100%;
+    }
+  }
 }

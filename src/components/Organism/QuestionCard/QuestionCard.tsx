@@ -54,11 +54,15 @@ const QuestionCard: React.FC<QuestionCardProps> = ({ role, totalQuestions, quest
     <main className={style.main}>
       <div className={style.container}>
         <header className={style.header}>
+          <h3>Rispondi!</h3>
           <h2 className={style.sectionTitle}>{role}</h2>
 
           <div className={style.progress}>
             <h3>
-              {currentQuestionIndex + 1}/{totalQuestions}
+              <div className={style.highlightedText}>
+                {currentQuestionIndex + 1}
+                <span> di {totalQuestions}</span>
+              </div>{" "}
             </h3>
             <ProgressBar currentStep={progressPercentage} totalSteps={100} />
           </div>

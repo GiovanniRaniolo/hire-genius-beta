@@ -4,6 +4,7 @@ import style from "./NavBar.module.scss";
 import { navMenu, footerMenu } from "@/constants/menuData";
 import ActionButton from "@/components/Atoms/Buttons/ActionButton";
 import MenuIcon from "/public/icons/menu-icon.png";
+
 import Image from "next/image";
 import { useAuth } from "@/context/AuthContext";
 
