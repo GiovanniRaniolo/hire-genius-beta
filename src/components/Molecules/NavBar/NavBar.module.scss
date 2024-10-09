@@ -53,6 +53,14 @@
           color: var(--tertiary);
           border: 2px solid var(--tertiary);
         }
+        & a.active {
+          color: var(--light);
+          background-color: var(--primary);
+          border: 2px solid var(--light);
+          pointer-events: none;
+          cursor: default;
+          font-weight: var(--fw-regular);
+        }
       }
     }
   }
@@ -89,6 +97,12 @@
         display: flex;
         align-items: center;
         column-gap: var(--gap-md);
+      }
+      .active {
+        color: var(--tertiary); /* Colore quando l'elemento è attivo */
+        pointer-events: none; /* Rimuove l'interazione hover sugli elementi attivi */
+        cursor: default; /* Cambia il cursore per indicare che non è cliccabile */
+        font-weight: var(--fw-regular);
       }
     }
   }

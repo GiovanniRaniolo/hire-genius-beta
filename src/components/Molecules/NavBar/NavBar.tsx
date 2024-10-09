@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router"; // <-- Nuovo import
 import style from "./NavBar.module.scss";
 import { navMenu, footerMenu } from "@/constants/menuData";
 import ActionButton from "@/components/Atoms/Buttons/ActionButton";
@@ -10,14 +11,15 @@ import { useAuth } from "@/context/AuthContext";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const { user } = useAuth(); // Usa il contesto di autenticazione
+  const { user } = useAuth();
+  const router = useRouter(); // Ottieni la rotta attuale
 
   const toggleMenu = (): void => {
     setIsOpen(!isOpen);
   };
 
   // Filtra il menu in base all'autenticazione
-  const filteredNavMenu = user ? navMenu.filter((item) => item.label !== "Login") : navMenu.filter((item) => item.label === "Login");
+  const filteredNavMenu = user ? navMenu.filter((item) => item.label !== "Login") : navMenu.filter((item) => item.label === "Login" || item.label === "HireGenius");
 
   return (
     <div className={style.navContainer} onMouseLeave={() => setIsOpen(false)}>
@@ -28,7 +30,7 @@ const NavBar = () => {
           <ul className={style.menuList}>
             {filteredNavMenu.map((item) => (
               <li key={item.label}>
-                <Link href={item.link} className={style.menuItem} onClick={() => setIsOpen(false)}>
+                <Link href={item.link} className={`${style.menuItem} ${router.pathname === item.link ? style.active : ""}`} onClick={() => setIsOpen(false)}>
                   <Image src={item.icon} alt={`${item.label} icon`} width={20} height={20} priority={false} />
                   {item.label}
                 </Link>
@@ -56,7 +58,7 @@ const NavBar = () => {
         <ul className={style.menuList}>
           {filteredNavMenu.map((item) => (
             <li key={item.label}>
-              <Link href={item.link} className={style.menuItem}>
+              <Link href={item.link} className={`${style.menuItem} ${router.pathname === item.link ? style.active : ""}`}>
                 {item.label}
               </Link>
             </li>
