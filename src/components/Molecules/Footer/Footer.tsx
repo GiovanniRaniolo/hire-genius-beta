@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
 import { footerLabels } from "@/constants/indexLabels";
-import { footerMenu, navMenu } from "@/constants/menuData";
+import { footerMenu } from "@/constants/menuData"; //add navMenu if you want filter with AuthContext
 import style from "./Footer.module.scss";
 import Link from "next/link";
-import { useAuth } from "@/context/AuthContext";
+// import { useAuth } from "@/context/AuthContext";
 import Image from "next/image";
 import logo from "@/../public/favicon.svg";
 
 const Footer = () => {
-  const { user } = useAuth(); // Usa il contesto di autenticazione
-  const [isVisible, setIsVisible] = useState(false); // Stato per gestire la visibilità del footer
+  // const { user } = useAuth();
+  const [isVisible, setIsVisible] = useState(false);
 
-  // Filtra il menu in base all'autenticazione
-  const filteredNavMenu = user ? navMenu.filter((item) => item.label !== "Login") : navMenu.filter((item) => item.label === "Login");
+  // const filteredNavMenu = user ? navMenu.filter((item) => item.label !== "Login") : navMenu.filter((item) => item.label === "Login");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,18 +45,20 @@ const Footer = () => {
         <div className={style.footerHeader}>
           <Image src={logo} alt="Logo img" width={60} height={60} priority={false} />
           <div className={style.footerText}>
-            <h4>{footerLabels.title}</h4>
-            <p>{footerLabels.subtitle}</p>
+            <Link key={footerLabels.title} href="/">
+              <h4>{footerLabels.title}</h4>
+              <p>{footerLabels.subtitle}</p>
+            </Link>
           </div>
         </div>
         <div className={style.footerMenu}>
-          <nav>
+          {/* <nav>
             {filteredNavMenu.map((item) => (
               <Link key={item.label} href={item.link}>
                 {item.label}
               </Link>
             ))}
-          </nav>
+          </nav> */}
           <nav>
             {footerMenu.map((item) => (
               <Link key={item.label} href={item.link}>

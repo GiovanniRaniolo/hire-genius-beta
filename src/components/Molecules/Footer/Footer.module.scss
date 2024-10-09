@@ -64,6 +64,14 @@
         color: var(--tertiary);
         font-size: var(--fs-sm);
       }
+      :hover {
+        h4 {
+          color: var(--tertiary);
+        }
+        p {
+          color: var(--accent);
+        }
+      }
     }
 
     .footerHeader,
@@ -71,6 +79,7 @@
     nav {
       justify-content: space-between;
       align-items: center;
+      gap: var(--gap-lg);
 
       & > a:hover,
       & > a:focus,

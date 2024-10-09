@@ -14,7 +14,7 @@ export const navMenu = [
   },
   {
     icon: HomeIcon,
-    label: "Home",
+    label: "La tua Home",
     link: "/storic-profile",
   },
   {
@@ -42,7 +42,7 @@ export const navMenu = [
 
 export const footerMenu = [
   {
-    label: "Il progetto",
+    label: "Il Progetto",
     link: "/",
   },
   {
