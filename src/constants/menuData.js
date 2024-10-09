@@ -7,6 +7,40 @@ import LoginIcon from "@/../public/icons/login.svg";
 // Icons from: https://www.svgrepo.com/collection/wave-oval-interface-icons/
 
 export const navMenu = [
+  // {
+  //   icon: HeroIcon,
+  //   label: "HireGenius",
+  //   link: "/",
+  // },
+  {
+    icon: HomeIcon,
+    label: "La tua Home",
+    link: "/storic-profile",
+  },
+  {
+    icon: TopicIcon,
+    label: "Nuovo argomento",
+    link: "/topic-process",
+  },
+  {
+    icon: InterviewIcon,
+    label: "Nuovo colloquio",
+    link: "/interview-process",
+  },
+
+  {
+    icon: LogoutIcon,
+    label: "Logout",
+    link: "/logout",
+  },
+  {
+    icon: LoginIcon,
+    label: "Login",
+    link: "/login",
+  },
+];
+
+export const sidebarMenu = [
   {
     icon: HeroIcon,
     label: "HireGenius",

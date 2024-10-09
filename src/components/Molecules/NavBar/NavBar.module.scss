@@ -87,7 +87,7 @@
     .menuList,
     .footerList {
       @include flex-column(var(--gap-md));
-      font-size: var(--fs-md);
+      font-size: var(--fs-smd);
 
       & > li:hover {
         font-weight: var(--fw-bold);
