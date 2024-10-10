@@ -7,11 +7,6 @@ import LoginIcon from "@/../public/icons/login.svg";
 // Icons from: https://www.svgrepo.com/collection/wave-oval-interface-icons/
 
 export const navMenu = [
-  // {
-  //   icon: HeroIcon,
-  //   label: "HireGenius",
-  //   link: "/",
-  // },
   {
     icon: HomeIcon,
     label: "La tua Home",

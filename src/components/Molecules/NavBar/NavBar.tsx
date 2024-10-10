@@ -18,7 +18,6 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
 
-  // Filtra il menu in base all'autenticazione
   const filteredSidebarMenu = user ? sidebarMenu.filter((item) => item.label !== "Login") : navMenu.filter((item) => item.label === "Login" || item.label === "HireGenius");
   const filteredNavMenu = user ? navMenu.filter((item) => item.label !== "Login") : navMenu.filter((item) => item.label === "Login");
 
@@ -64,12 +63,6 @@ const NavBar = () => {
               </Link>
             </li>
           ))}
-          {/* {!user &&
-            footerMenu.map((item) => (
-              <li key={item.label}>
-                <Link href={item.link}>{item.label}</Link>
-              </li>
-            ))} */}
         </ul>
       </nav>
     </div>
