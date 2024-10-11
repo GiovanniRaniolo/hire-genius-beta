@@ -18,7 +18,7 @@ export default function Home() {
         <Hero />
         <Features />
         <Interviewers />
-        <ChiSiamo />
+        {/* <ChiSiamo /> */}
       </main>
     </>
   );
