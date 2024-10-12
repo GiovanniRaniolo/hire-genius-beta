@@ -20,7 +20,7 @@ export const profiles = [
     avatarSrc: Avatar2,
     name: "Davide",
     value: "Davide",
-    shortBio: "Diretto, analizza come superi sfide.",
+    shortBio: "Diretto, analizza come superi le sfide.",
     longBio:
       "Analitico e diretto, con uno stile di comunicazione chiaro e conciso. Le sue domande, come: -Puoi descrivermi una situazione in cui hai affrontato una difficoltà sul lavoro e come l’hai risolta?- riflettono il desiderio di comprendere come gli altri si confrontano con sfide simili e quale approccio adottano per ottenere risultati concreti.",
     level: "semplice",

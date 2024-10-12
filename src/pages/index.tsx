@@ -3,7 +3,7 @@ import { headLabels } from "@/constants/indexLabels";
 import Hero from "@/components/Molecules/Hero/Hero";
 import Features from "@/components/Molecules/Features/Features";
 import Interviewers from "@/components/Molecules/Interviewers/Interviewers";
-import ChiSiamo from "@/components/Molecules/ChiSiamo/ChiSiamo";
+// import ChiSiamo from "@/components/Molecules/ChiSiamo/ChiSiamo";
 import React from "react";
 
 export default function Home() {
