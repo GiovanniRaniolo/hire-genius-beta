@@ -14,7 +14,6 @@
       margin: 0 auto;
       max-width: 1300px;
       justify-content: center;
-      padding-bottom: 100px;
     }
 
     .interviewersHeader {
@@ -45,7 +44,7 @@
         column-gap: var(--gap-lg);
         max-width: 100%;
         width: calc(100vw - var(--page-padding) - var(--page-padding));
-        height: auto; /* Cambia da 400px a auto per consentire una disposizione flessibile */
+        height: auto;
       }
 
       .interviewerCard {
@@ -55,12 +54,18 @@
         @include flex-column(var(--gap-md));
         justify-content: center;
         align-items: stretch;
-
-        margin-bottom: var(--gap-md); /* Margine inferiore per la distanza tra le righe */
+        margin-bottom: var(--gap-md);
+        max-width: 600px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
 
         @media (min-width: 1025px) {
-          margin-bottom: 0; /* Rimuovi il margine inferiore in desktop per uniformità */
-          width: calc(28% - var(--gap-lg) / 2); /* Imposta ogni card a occupare 1/3 della riga */
+          margin-bottom: 0;
+          width: calc(28% - var(--gap-lg) / 2);
+        }
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
 
         .avatarContainer {
@@ -109,8 +114,8 @@
         }
       }
     }
-    .hr {
-      text-align: center;
-    }
+  }
+  .hr {
+    text-align: center;
   }
 }

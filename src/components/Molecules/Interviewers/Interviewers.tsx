@@ -34,6 +34,9 @@ const Interviewers = () => {
 
         {/* <CtaButton className='ctaC' label={interviewersLabels.start} /> */}
       </div>
+      <div className={style.hr}>
+        <Image src={hr} alt="Decorative horizontal rule" width={995} height={28} priority={true} />
+      </div>
     </section>
   );
 };
