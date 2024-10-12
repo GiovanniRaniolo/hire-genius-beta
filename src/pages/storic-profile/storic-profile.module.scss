@@ -10,26 +10,18 @@
   .container {
     @include flex-column(var(--gap-md));
     padding: 0;
-    @media (min-width: 767px) {
-      // padding-top: 60px;
-      padding-bottom: 62px;
-      align-items: center;
-    }
     @media (min-width: 1025px) {
+      padding-bottom: 66px;
       padding-top: 60px;
     }
 
     p {
       color: var(--white);
-      line-height: 20px;
-      text-align: left;
+      text-align: center;
 
       span {
         color: var(--tertiary);
         font-weight: var(--fw-bold);
-      }
-      @media (min-width: 767px) {
-        // padding: 0 62px;
       }
     }
 
@@ -64,9 +56,6 @@
     justify-content: flex-end;
     padding-bottom: var(--gap-sm);
     border-bottom: 1px solid var(--medium);
-    @media (min-width: 767px) {
-      transform: translate(212px, 0);
-    }
 
     span {
       color: var(--white);
@@ -124,7 +113,7 @@
       padding-left: 26px;
     }
     @media (min-width: 1024px) {
-      padding-left: 56px;
+      padding-left: 70px;
     }
   }
 
@@ -144,16 +133,18 @@
   }
 
   .linkBtn {
-    width: 100%;
+    // width: 100%;
+    padding-top: 36px;
     padding-bottom: 36px;
 
-    @media (min-width: 767px) {
-      width: unset;
-    }
+    // @media (min-width: 767px) {
+    //   width: unset;
+    // }
 
     button {
       @include button;
-      width: 100%;
+      margin: 0 auto;
+      // width: 100%;
     }
   }
 }

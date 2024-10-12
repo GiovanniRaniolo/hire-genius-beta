@@ -19,10 +19,13 @@ const ResultsList = (props: ResultsListProps) => {
               <div className={style.avatarBox}>
                 <Image src={interviewDetails.interviewer.avatarSrc} alt="Interviewer Avatar" width={160} height={160} priority />
               </div>
+              <span>{interviewDetails.interviewer.name}</span>
             </div>
 
             <div className={style.feedbackSection}>
               <h3>
+                {" "}
+                <span>Punteggio: </span>
                 {evaluationResult.globalEvaluation.points}/{evaluationResult.globalEvaluation.outOf}
               </h3>
               <p>{evaluationResult.globalEvaluation.feedback}</p>

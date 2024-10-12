@@ -13,13 +13,14 @@
     justify-content: center;
 
     @media (min-width: 767px) {
+      padding-top: 80px;
       margin: 0 auto;
       max-width: 1300px;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
 
-      padding-top: calc(100px + var(--page-padding)) !important;
+      // padding-top: calc(100px + var(--page-padding)) !important;
     }
 
     .heroContent {
