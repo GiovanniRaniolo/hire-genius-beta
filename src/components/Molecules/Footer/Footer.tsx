@@ -51,22 +51,14 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className={style.footerMenu}>
-          {/* <nav>
-            {filteredNavMenu.map((item) => (
-              <Link key={item.label} href={item.link}>
-                {item.label}
-              </Link>
-            ))}
-          </nav> */}
-          <nav>
-            {footerMenu.map((item) => (
-              <Link key={item.label} href={item.link}>
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
+        <nav className={style.footerMenu}>
+          {footerMenu.map((item) => (
+            <Link key={item.label} href={item.link}>
+              <Image src={item.icon} alt={`${item.label} icon`} width={20} height={20} priority={false} />
+              {item.label}
+            </Link>
+          ))}
+        </nav>
       </div>
     </footer>
   );

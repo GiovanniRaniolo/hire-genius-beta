@@ -4,6 +4,7 @@ import TopicIcon from "@/../public/icons/topic.svg";
 import InterviewIcon from "@/../public/icons/interview.svg";
 import LogoutIcon from "@/../public/icons/logout.svg";
 import LoginIcon from "@/../public/icons/login.svg";
+import GitIcon from "/public/icons/github.svg";
 // Icons from: https://www.svgrepo.com/collection/wave-oval-interface-icons/
 
 export const navMenu = [
@@ -71,16 +72,9 @@ export const sidebarMenu = [
 
 export const footerMenu = [
   {
-    label: "Il Progetto",
-    link: "/",
-  },
-  {
-    label: "Chi siamo",
-    link: "/#chi-siamo",
-  },
-  {
     label: "Github",
     link: "https://github.com/GiovanniRaniolo/hire-genius-beta",
+    icon: GitIcon,
   },
 ];
 

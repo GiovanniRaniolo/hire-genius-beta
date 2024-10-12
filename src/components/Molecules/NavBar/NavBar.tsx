@@ -46,7 +46,9 @@ const NavBar = () => {
                 </Link>
               </li>
             ))}
-            <p>@2024 HireGenius</p>
+            <Link href="/">
+              <p>@2024 HireGenius</p>
+            </Link>
           </ul>
         </nav>
       )}

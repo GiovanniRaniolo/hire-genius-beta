@@ -28,7 +28,7 @@
       @include flex-column(var(--gap-md));
       align-items: flex-start;
 
-      @media (min-width: 1025px) {
+      @media (min-width: 767px) {
         order: 0;
 
         p {
@@ -85,7 +85,7 @@
       border-right: 4px dashed var(--tertiary);
       border-radius: 50%;
 
-      @media (min-width: 1025px) {
+      @media (min-width: 767px) {
         order: 1;
         margin-top: unset;
         height: unset;

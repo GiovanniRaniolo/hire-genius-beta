@@ -79,7 +79,6 @@
     nav {
       justify-content: space-between;
       align-items: center;
-      gap: var(--gap-md);
 
       & > a:hover,
       & > a:focus,
@@ -87,14 +86,19 @@
         color: var(--tertiary);
         font-weight: var(--fw-bold);
       }
-
-      @media (min-width: 767px) {
-        align-items: start;
-      }
     }
 
     .footerMenu {
       @include flex-column(var(--gap-lg));
+      img {
+        padding-top: 18px;
+        width: 26px;
+        height: 32px;
+      }
+
+      a {
+        padding-bottom: 12px;
+      }
 
       @media (min-width: 767px) {
         flex-direction: row;
