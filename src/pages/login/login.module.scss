@@ -1,11 +1,13 @@
 .login {
   @include main;
+
   .loginContainer {
-    min-height: 100dvh;
     @include flex-column(0px);
     justify-content: center;
+    padding-top: 12px;
 
     @media (min-width: 767px) {
+      padding-top: 0;
       margin: 0 31px;
       max-width: 1000px;
       flex-direction: row;
@@ -37,7 +39,7 @@
 
     .main {
       @include flex-column(var(--gap-md));
-      padding: 0 var(--page-padding) var(--page-padding);
+      padding: 0 var(--page-padding);
 
       @media (min-width: 767px) {
         width: 460px;
@@ -52,7 +54,7 @@
       }
 
       .header {
-        @include flex-column(var(--gap-md));
+        @include flex-column(var(--gap-sm));
         margin-bottom: var(--gap-md);
         align-items: flex-end;
         width: 100%;

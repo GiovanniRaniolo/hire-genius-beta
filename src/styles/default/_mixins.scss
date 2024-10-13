@@ -68,7 +68,7 @@
   }
   .container {
     padding: var(--page-padding);
-    min-height: 100dvh;
+    // min-height: 100dvh;
 
     @include flex-column(var(--gap-lg));
 
@@ -106,18 +106,14 @@
 
   .sectionTitle {
     padding: 0 20px;
-    // height: 40px;
     @include flex-center();
     color: var(--tertiary);
-    font-size: var(--fs-lg);
-
+    font-size: var(--fs-xl);
     width: 100%;
-
     text-align: center;
 
     @media (min-width: 767px) {
       font-size: (var(--fs-lg));
-      // display: block;
     }
   }
 }

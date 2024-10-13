@@ -81,11 +81,11 @@ const RegisterForm = () => {
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
           required={true}
-          placeholder="Inserisci il tuo nome utente"
+          placeholder="il tuo nome utente"
           minLength={3}
         />
 
-        <InputBox type="email" name="userEmail" label="Email" value={email} onChange={(e) => setEmail(e.target.value)} required={true} placeholder="Inserisci la tua email" />
+        <InputBox type="email" name="userEmail" label="Email" value={email} onChange={(e) => setEmail(e.target.value)} required={true} placeholder="la tua e-mail" />
 
         <InputBox
           type="password"
@@ -94,7 +94,7 @@ const RegisterForm = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required={true}
-          placeholder="Scegli una password di almeno 6 caratteri"
+          placeholder="almeno 6 caratteri"
           minLength={6}
         />
         {error && <mark className={style.invalid}>{error}</mark>}

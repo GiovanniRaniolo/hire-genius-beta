@@ -24,6 +24,7 @@
 
   h3 {
     color: var(--tertiary);
+    font-weight: var(--fw-bold);
     span {
       color: var(--light);
       font-size: var(--fs-md);
@@ -44,10 +45,8 @@
     justify-content: center;
     align-items: flex-end;
     position: relative;
-
     width: 140px;
     height: 140px;
-
     background-color: var(--accent);
     border-radius: 50%;
     border: 5px solid var(--tertiary);
@@ -55,7 +54,8 @@
     span {
       position: absolute;
       color: var(--white);
-      bottom: -14px;
+      font-weight: var(--fw-bold);
+      bottom: -18px;
       background: var(--tertiary-gradient);
       padding: 4px 12px;
       border-radius: var(--border-radius);
@@ -78,6 +78,7 @@
   }
 
   .feedbackSection {
+    padding-top: var(--gap-lg);
     // text-align: center;
     color: var(--light);
 
@@ -92,7 +93,8 @@
       text-align: start;
 
       p {
-        max-width: 60ch;
+        text-align: start;
+        width: 100%;
       }
     }
 

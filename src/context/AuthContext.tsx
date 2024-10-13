@@ -1,19 +1,6 @@
-import React, {
-  createContext,
-  useContext,
-  useState,
-  ReactNode,
-  useEffect,
-} from "react";
+import React, { createContext, useContext, useState, ReactNode, useEffect } from "react";
 import { auth, googleProvider, db } from "../lib/firebaseConfig";
-import {
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-  signInWithPopup,
-  signOut,
-  sendPasswordResetEmail,
-  User,
-} from "firebase/auth";
+import { onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, sendPasswordResetEmail, User } from "firebase/auth";
 import { FirebaseError } from "firebase/app";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 
@@ -86,9 +73,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       if (error instanceof FirebaseError) {
         throw new Error("Errore durante il recupero della password.");
       } else {
-        throw new Error(
-          "Errore sconosciuto durante il recupero della password."
-        );
+        throw new Error("Errore sconosciuto durante il recupero della password.");
       }
     }
   };
@@ -102,13 +87,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     return () => unsubscribe();
   }, []);
 
-  return (
-    <AuthContext.Provider
-      value={{ user, login, loginWithGoogle, logout, resetPassword }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={{ user, login, loginWithGoogle, logout, resetPassword }}>{children}</AuthContext.Provider>;
 };
 
 // Hook per il contesto di autenticazione
