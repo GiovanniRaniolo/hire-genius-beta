@@ -1,4 +1,4 @@
-import HeroIcon from "@/../public/icons/github.svg";
+import HeroIcon from "@/../public/icons/HireGeniusIcon.png";
 import HomeIcon from "@/../public/icons/home.svg";
 import TopicIcon from "@/../public/icons/topic.svg";
 import InterviewIcon from "@/../public/icons/interview.svg";
