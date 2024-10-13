@@ -1,4 +1,3 @@
-//da piazzare in pages/topic-process.tsx
 import { useAuth } from "@/context/AuthContext";
 import { saveInterviewSession } from "@/utils/saveInterviewSession";
 import ResultsListError from "@/components/Organism/ResultsListError/ResultsListError";
@@ -18,7 +17,7 @@ import style from "./interview-process.module.scss";
 type Step = "newInterview" | "interviewRequirements" | "chooseInterviewer" | "questionCard" | "resultsList";
 
 const InterviewProcess = () => {
-  const { user } = useAuth(); // Otteniamo l'utente autenticato dal contesto
+  const { user } = useAuth();
   const [interviewOptions, setInterviewOptions] = useState<InterviewOptions | null>(null);
   const [interviewRequirements, setInterviewRequirements] = useState("");
   const [interviewDetails, setInterviewDetails] = useState<InterviewDetails | null>(null);
@@ -55,7 +54,7 @@ const InterviewProcess = () => {
       interviewRequirements,
       interviewer: selectedInterviewer,
     };
-    setInterviewDetails(newInterviewDetails); // Imposta lo stato dell'intervista
+    setInterviewDetails(newInterviewDetails);
 
     const prompt = `
 		  Immagina di essere l'esaminatore ${newInterviewDetails.interviewer.name}. ${newInterviewDetails.interviewer.longBio}.

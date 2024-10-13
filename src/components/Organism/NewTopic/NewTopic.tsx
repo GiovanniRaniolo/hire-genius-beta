@@ -32,11 +32,10 @@ const NewTopic: React.FC<TopicFormProps> = ({ onSubmit }) => {
           </div>
 
           <p>
-            {" "}
             <span>Approccio Mirato!</span>
             <br />
             Esercitati su domande specifiche. <br />
-            Inserisci l'argomento su cui desideri concentrarti e vai allo step successivo.
+            Inserisci l&apos;argomento su cui desideri concentrarti e vai allo step successivo.
           </p>
         </header>
 

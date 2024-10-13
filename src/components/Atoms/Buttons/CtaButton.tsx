@@ -1,3 +1,4 @@
+import Image from "next/image";
 import style from "./Button.module.scss";
 
 interface ButtonProps {
@@ -16,7 +17,7 @@ const CtaButton = (props: ButtonProps) => {
     <button className={`${style.button} ${style.ctaButton} ${className && style[className]}`} onClick={onClick} type={type} disabled={disabled}>
       {icon && (
         <span className={style.icon}>
-          <img src={icon} alt="Icon" />
+          <Image src={icon} alt="Icon" width={20} height={20} />
         </span>
       )}
       {label}

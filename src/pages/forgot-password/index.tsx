@@ -1,4 +1,4 @@
-import { collection, query, where, getDocs } from "firebase/firestore"; // Importare le funzioni di Firestore
+import { collection, query, where, getDocs } from "firebase/firestore";
 import style from "./forgotPassword.module.scss";
 import { useEffect, useRef, useState } from "react";
 import { useAuth } from "@/context/AuthContext";
@@ -7,7 +7,7 @@ import { FirebaseError } from "firebase/app";
 import { forgotPasswordLabels } from "@/constants/forgotPasswordLabels";
 import Input from "@/components/Atoms/Input/Input";
 import CtaButton from "@/components/Atoms/Buttons/CtaButton";
-import { db } from "@/lib/firebaseConfig"; // Importare il database Firestore
+import { db } from "@/lib/firebaseConfig";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -90,7 +90,7 @@ const ForgotPassword = () => {
         )}
 
         <p>
-          Inserisci la mail che hai usato per la registrazione e premi "Invia" e controlla la tua casella di posta. <br />
+          Inserisci la mail che hai usato per la registrazione e premi &quot;Invia&quot; e controlla la tua casella di posta. <br />
           Troverai il link per reimpostare la password.
         </p>
         <p>
