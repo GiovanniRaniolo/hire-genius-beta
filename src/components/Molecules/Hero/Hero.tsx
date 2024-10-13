@@ -23,7 +23,7 @@ const Hero = () => {
             <br />
             per Test di
             <span className={style.wrappedText1}> competenza</span>
-            <br />e Colloqui <span className={style.wrappedText2}> di successo </span>
+            <br />e Colloqui di<span className={style.wrappedText2}> successo </span>
           </h2>
           <p>{heroLabels.subtitle}</p>
 

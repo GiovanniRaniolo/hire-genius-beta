@@ -46,25 +46,23 @@
       h2 {
         font-size: calc(var(--fs-lg) * 1.5);
 
-        @media (min-width: 574px) {
-          line-height: 1.8;
-          .wrappedText1 {
-            // padding: 1rem 0;
-            // background-image: url(/hero/text-decoration2.png);
-            // background-repeat: no-repeat;
-            // background-size: 160px 25px;
-            // background-position: 10px 100%;
-            color: var(--tertiary);
-          }
+        // line-height: 1.8;
+        .wrappedText1 {
+          // padding: 1rem 0;
+          // background-image: url(/hero/text-decoration2.png);
+          // background-repeat: no-repeat;
+          // background-size: 160px 25px;
+          // background-position: 10px 100%;
+          color: var(--tertiary);
+        }
 
-          .wrappedText2 {
-            // padding: 1rem 1rem;
-            // background-image: url(/hero/text-decoration.png);
-            // background-repeat: no-repeat;
-            // background-size: 265px 50px;
-            // background-position: 0 60%;
-            color: var(--tertiary);
-          }
+        .wrappedText2 {
+          // padding: 1rem 1rem;
+          // background-image: url(/hero/text-decoration.png);
+          // background-repeat: no-repeat;
+          // background-size: 265px 50px;
+          // background-position: 0 60%;
+          color: var(--tertiary);
         }
       }
 
