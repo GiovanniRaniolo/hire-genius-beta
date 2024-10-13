@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef, useCallback } from "react";
 import style from "./Loading.module.scss";
+import { useEffect, useState, useRef } from "react";
 import { LoadingProps } from "@/interfaces/interfaces";
 
 const Loading = (props: LoadingProps) => {
@@ -23,7 +23,7 @@ const Loading = (props: LoadingProps) => {
   const [lastMessageIndex, setLastMessageIndex] = useState(-1);
   const typingInterval = useRef<NodeJS.Timeout | null>(null);
 
-  const getRandomLoadingMessage = useCallback(() => {
+  const getRandomLoadingMessage = () => {
     const availableMessages = messages.filter((_, index) => index !== lastMessageIndex);
 
     if (availableMessages.length === 0) return ""; // Gestisci il caso in cui non ci siano messaggi disponibili
@@ -33,7 +33,7 @@ const Loading = (props: LoadingProps) => {
     setLastMessageIndex(messages.indexOf(selectedMessage));
 
     return selectedMessage;
-  }, [lastMessageIndex, messages]);
+  };
 
   useEffect(() => {
     if (lazyLoading) {
@@ -70,7 +70,7 @@ const Loading = (props: LoadingProps) => {
         }
       };
     }
-  }, [lazyLoading, getRandomLoadingMessage]);
+  }, [lazyLoading]);
 
   return (
     <div className={style.loadingScreen}>
