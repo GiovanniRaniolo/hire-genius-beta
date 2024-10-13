@@ -52,7 +52,7 @@
 
 @mixin main {
   width: 100dvw;
-  height: 100dvh;
+  // height: 100dvh;
   max-width: 600px;
   margin: 0 auto;
 
@@ -68,7 +68,7 @@
   }
   .container {
     padding: var(--page-padding);
-    min-height: 100vh;
+    min-height: 100dvh;
 
     @include flex-column(var(--gap-lg));
 
