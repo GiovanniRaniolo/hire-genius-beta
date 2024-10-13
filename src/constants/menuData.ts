@@ -1,4 +1,4 @@
-import HeroIcon from "@/../public/icons/heroIcon.png";
+import HeroIcon from "/public/icons/heroIcon.png";
 import HomeIcon from "@/../public/icons/home.svg";
 import TopicIcon from "@/../public/icons/topic.svg";
 import InterviewIcon from "@/../public/icons/interview.svg";
