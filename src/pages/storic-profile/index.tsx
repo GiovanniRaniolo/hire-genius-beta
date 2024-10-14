@@ -84,7 +84,7 @@ const UserProfile = () => {
               </header>
 
               <p>
-                Simula un <span>colloquio</span> di lavoro o cimentati con un approccio mirato selezionando un nuovo <span>argomento</span>. <br />
+                Simula un <span>Colloquio</span> di lavoro o cimentati con un approccio mirato selezionando un nuovo <span>Argomento</span>. <br />
               </p>
               <div className={style.headerButtons}>
                 <Link href="./topic-process">
@@ -104,7 +104,7 @@ const UserProfile = () => {
               {/*Lista Card */}
               <section>
                 <h5 className={style.recentTests}>
-                  Test Recenti
+                  Test Recenti:
                   <span>{interviewSessions.length}</span>
                 </h5>
                 <ul className={style.cardsList}>

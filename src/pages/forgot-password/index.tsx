@@ -90,8 +90,8 @@ const ForgotPassword = () => {
         )}
 
         <p>
-          Inserisci la mail che hai usato per la registrazione e premi &quot;Invia&quot; e controlla la tua casella di posta. <br />
-          Troverai il link per reimpostare la password.
+          Inserisci la mail che hai usato per la registrazione, premi &quot;Invia&quot; e controlla la tua casella di posta. <br />
+          Riceverai il link per reimpostare la password.
         </p>
         <p>
           <Link href="/login" className={style.login}>
