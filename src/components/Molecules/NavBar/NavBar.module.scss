@@ -1,7 +1,7 @@
 .navContainer {
   position: fixed;
   padding: var(--page-padding);
-  z-index: 10;
+  z-index: 10; // Navbar sopra l'overlay
 
   .navbar {
     display: none;
@@ -78,6 +78,7 @@
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 5; // Sidebar sopra l'overlay
 
     .footerList {
       padding-top: var(--gap-md);
@@ -99,11 +100,21 @@
         column-gap: var(--gap-md);
       }
       .active {
-        color: var(--tertiary); /* Colore quando l'elemento è attivo */
-        pointer-events: none; /* Rimuove l'interazione hover sugli elementi attivi */
-        cursor: default; /* Cambia il cursore per indicare che non è cliccabile */
+        color: var(--tertiary);
+        pointer-events: none;
+        cursor: default;
         font-weight: var(--fw-regular);
       }
     }
   }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); // Cambia il valore alfa per regolare l'oscuramento
+  z-index: 1; // Deve essere inferiore a .navContainer e .sidebar
 }

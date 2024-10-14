@@ -8,6 +8,7 @@
   .howToContainer {
     min-height: fit-content;
     padding: calc(var(--page-padding) * 2) var(--page-padding);
+    padding-bottom: 22px;
     display: flex;
     flex-direction: column;
     gap: var(--gap-lg);
@@ -17,6 +18,7 @@
     @media (min-width: 767px) {
       padding-left: 0;
       padding-right: 0;
+      padding-bottom: 60px;
       margin: 0 auto;
       max-width: 1300px;
       justify-content: center;
