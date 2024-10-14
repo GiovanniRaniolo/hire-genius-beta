@@ -1,7 +1,7 @@
 .navContainer {
   position: fixed;
   padding: var(--page-padding);
-  z-index: 10; // Navbar sopra l'overlay
+  z-index: 10;
 
   .navbar {
     display: none;
@@ -78,7 +78,7 @@
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    z-index: 5; // Sidebar sopra l'overlay
+    z-index: 5;
 
     .footerList {
       padding-top: var(--gap-md);
@@ -115,6 +115,6 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); // Cambia il valore alfa per regolare l'oscuramento
-  z-index: 1; // Deve essere inferiore a .navContainer e .sidebar
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
