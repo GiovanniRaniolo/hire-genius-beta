@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import style from "./NavBar.module.scss";
 import { sidebarMenu, navMenu, footerMenu } from "@/constants/menuData";
 import ActionButton from "@/components/Atoms/Buttons/ActionButton";
 import MenuIcon from "/public/icons/menu-icon.png";
-
 import Image from "next/image";
 import { useAuth } from "@/context/AuthContext";
 
@@ -18,6 +17,24 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
 
+  // Chiude il menu quando l'utente clicca all'esterno del menu
+  const handleClickOutside = (event: MouseEvent) => {
+    const menuElement = document.getElementById("sidebar-menu");
+    if (menuElement && !menuElement.contains(event.target as Node)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    // Aggiunge l'evento per chiudere il menu quando si clicca all'esterno
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Rimuove l'evento al momento della pulizia
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const filteredSidebarMenu = user ? sidebarMenu.filter((item) => item.label !== "Login") : navMenu.filter((item) => item.label === "Login" || item.label === "HireGenius");
   const filteredNavMenu = user ? navMenu.filter((item) => item.label !== "Login") : navMenu.filter((item) => item.label === "Login");
 
@@ -26,7 +43,7 @@ const NavBar = () => {
       {!isOpen && <ActionButton onClick={toggleMenu} className="round" icon={MenuIcon} />}
 
       {isOpen && (
-        <nav className={style.sidebar}>
+        <nav id="sidebar-menu" className={style.sidebar}>
           <ul className={style.menuList}>
             {filteredSidebarMenu.map((item) => (
               <li key={item.label}>
