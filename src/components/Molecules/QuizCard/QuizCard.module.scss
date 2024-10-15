@@ -24,6 +24,12 @@
     padding: 18px;
   }
 
+  &.selectedCard {
+    p {
+      text-align: left;
+    }
+  }
+
   .titleCard {
     max-width: 300px;
     font-size: var(--fs-md);

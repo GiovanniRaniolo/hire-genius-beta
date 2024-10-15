@@ -82,11 +82,15 @@
     // text-align: center;
     color: var(--light);
 
+    p {
+      text-align: left;
+    }
+
     @media (min-width: 767px) {
       text-align: start;
 
       p {
-        max-width: 52ch;
+        max-width: 58ch;
       }
     }
     @media (min-width: 1024px) {

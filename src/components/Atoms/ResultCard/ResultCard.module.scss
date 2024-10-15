@@ -3,17 +3,23 @@
   @include flex-column(var(--gap-md));
   align-items: flex-start;
   background: none;
-
   transition: transform 0.8s ease;
   h4 {
-    padding-bottom: 6px;
     color: var(--secondary);
+  }
+
+  p {
+    margin-top: 18px;
   }
 
   &.selectedResultCard {
     transform: scale(1.05);
     margin: var(--gap-lg) 0;
     border: 4px solid var(--light);
+
+    div p {
+      text-align: left;
+    }
   }
 
   &.correct {
@@ -31,6 +37,25 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 9px;
+
+    h4 {
+      text-align: center;
+      display: inline;
+      padding: 8px 13px;
+      border-radius: 50%;
+      color: var(--tertiary);
+      background-color: var(--dark);
+      font-weight: 900;
+    }
+
+    p {
+      padding-top: 12px;
+    }
+  }
+
+  .resultCardHeader div p {
+    text-align: left;
   }
 
   & > :last-child {

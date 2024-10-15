@@ -1,9 +1,7 @@
 import style from "./ResultCard.module.scss";
-
 import Image from "next/image";
 import { useState } from "react";
 import ActionButton from "../Buttons/ActionButton";
-
 import arrowSelect from "@/../public/icons/arrow-select.png";
 import arrowUp from "@/../public/icons/arrow-up.png";
 import { ResultCardProps } from "@/interfaces/interfaces";
@@ -19,10 +17,10 @@ const ResultCard = (props: ResultCardProps) => {
     <div className={`${style.resultCard} ${style[response.answerStatus]} ${showDetails && style.selectedResultCard}`}>
       <div className={style.resultCardHeader}>
         <div>
-          <h4>Domanda {index + 1}</h4>
+          <h4>{index + 1}</h4>
           <p>{response.q}</p>
         </div>
-        <Image src={statusIcon} alt={`${response.answerStatus} icon`} width={30} height={30} />
+        <Image src={statusIcon} alt={`${response.answerStatus} icon`} width={32} height={32} />
       </div>
       {showDetails && (
         <>
