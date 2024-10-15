@@ -8,13 +8,13 @@ Nato come parte del Final Project per il **Full-Time Coding Bootcamp di Edgemony
 > Visita il link qui sotto per scoprire come può rivoluzionare la tua preparazione ai colloqui:
 
 <p align="center">
-  <a href="https://hire-genius.vercel.app" style="text-decoration: none;">
+  <a href="https://hire-genius-beta.vercel.app" style="text-decoration: none;">
     <strong>🌟🌟🌟  Inizia il tuo primo colloquio!  🌟🌟🌟</strong>
   </a>
 </p>
 
 <p align="center">
-  <a href="https://hire-genius.vercel.app">
+  <a href="https://hire-genius-beta.vercel.app">
     <img src="./public/docs-media/subscribe.gif" alt="Prova HireGenius!" />
   </a>
 </p>
@@ -25,6 +25,7 @@ Nato come parte del Final Project per il **Full-Time Coding Bootcamp di Edgemony
     <img src="public/docs-media/screenshot1.png" alt="Login" width="200"/>
     <img src="public/docs-media/screenshot2.png" alt="Interviewers" width="200"/>
     <img src="public/docs-media/screenshot3.png" alt="Profile" width="200"/>
+    <img src="public/docs-media/screenshot4.png" alt="Profile" width="200"/>
 </p>
 
 ## Table of Contents
@@ -44,9 +45,8 @@ Nato come parte del Final Project per il **Full-Time Coding Bootcamp di Edgemony
    - [Come Contribuire](#come-contribuire-)
 5. [Future Implementazioni](#future-implementazioni-)
 6. [Licenza](#licenza-)
-7. [Team di Sviluppo E Contatti](#team-di-sviluppo-e-contatti-)
 
-## 1. Panoramica 🌐
+## Panoramica 🌐
 
 _HireGenius_ è un'app web innovativa concepita per supportare chiunque desideri migliorare e testare le proprie competenze, trasformando l’esperienza di preparazione per colloqui, interrogazioni scolastiche e universitarie.
 
@@ -247,14 +247,14 @@ Quando si inviano richieste al server, i dati vengono formattati in modo coerent
 
 ```json
 {
-    "prompt": "Immagina di essere l'esaminatore ...",
-    "quizResponses": [
-        {
-            "q": "Qual è la capitale della Francia?",
-            "a": "Parigi"
-        },
-        ...
-    ]
+  "prompt": "Immagina di essere l'esaminatore ...",
+  "quizResponses": [
+    {
+      "q": "Qual è la capitale della Francia?",
+      "a": "Parigi"
+    }
+    //...
+  ]
 }
 ```
 
@@ -371,31 +371,8 @@ Allo stato attuale _HireGenius_ è un MVP, le potenzialità del progetto sono va
 
 Il progetto _HireGenius_ è distribuito sotto licenza MIT. Puoi trovare ulteriori dettagli nel file [LICENSE](LICENSE).
 
-## Team di Sviluppo e Contatti 👥
-
 <p align="center">
-  <a href="https://github.com/giusene" style="text-decoration: none; color: #0366d6;">
-    <strong>Giuseppe Senettone</strong>
-  </a> <small> - technical project manager</small><br> 
-  <a href="https://www.linkedin.com/in/brunaalamia/" style="text-decoration: none; color: #0366d6;">
-    <strong>Bruna Alamia</strong>
-  </a> <small> - developer</small> <br>
-  <a href="https://github.com/Birdofillome" style="text-decoration: none; color: #0366d6;">
-    <strong>Chiara Corvitto</strong>
-  </a> <small> - developer</small> <br> 
-  <a href="https://github.com/meliasil" style="text-decoration: none; color: #0366d6;">
-    <strong>Silvia Melia</strong>
-  </a> <small> - developer</small> <br> 
-  <a href="https://github.com/GiovanniRaniolo" style="text-decoration: none; color: #0366d6;">
-    <strong>Giovanni Raniolo</strong>
-  </a> <small> - developer</small><br> 
-  <a href="https://github.com/Nikeandros" style="text-decoration: none; color: #0366d6;">
-    <strong>Ivan Giuseppe Saltaformaggio</strong>
-  </a> <small> - developer</small> <br>
-</p>
-
-<p align="center">
-  <a href="https://hire-genius.vercel.app">
+  <a href="https://hire-genius-beta.vercel.app">
     <img src="./public/docs-media/banner.png" alt="Footer Image" width= "100%"; max-width="900px"; border-radius= "5px";>
   </a>
 </p>
