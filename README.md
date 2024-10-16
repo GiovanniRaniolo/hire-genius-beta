@@ -106,10 +106,6 @@ Per iniziare a utilizzare _HireGenius_ e prepararti al meglio per i tuoi colloqu
 
 8. **Profilo**: Le interviste e i colloqui che hai sostenuti saranno sempre disponibili per future consultazioni nella sezione "Profilo".
 
-<p align="center">
-    <img src="./public/docs-media/hire-genius.gif" alt="gif" width="200"/>
-</p>
-
 ## Dietro le Quinte 🎭
 
 La combinazione di prompt engineering, JSON strutturati e un approccio modulare ci ha consentito di ottimizzare l'interazione con i modelli di IA, garantendo risposte pertinenti e di alta qualità. La logica del frontend gestisce l'interazione utente in modo fluido, permettendo di ottenere un'esperienza utente efficace e intuitiva. Implementare questa architettura ha richiesto attenzione ai dettagli, sia nella progettazione che nella gestione. Di seguito alcune informazioni che riguardano l'aspetto tecnico.
