@@ -22,6 +22,11 @@
 
     .header {
       @include header;
+
+      .sectionTitle {
+        font-size: var(--fs-lg);
+        padding-bottom: 12px;
+      }
     }
 
     .interviewerForm {
