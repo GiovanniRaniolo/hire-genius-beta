@@ -365,7 +365,7 @@ Allo stato attuale _HireGenius_ è un MVP, le potenzialità del progetto sono va
 
 ## Licenza 📜
 
-Il progetto _HireGenius_ è distribuito sotto licenza MIT. Puoi trovare ulteriori dettagli nel file [LICENSE](LICENSE).
+Il progetto _HireGenius_ è distribuito sotto licenza MIT. Puoi trovare ulteriori dettagli nel file [LICENSE](License).
 
 <p align="center">
   <a href="https://hire-genius-beta.vercel.app">
