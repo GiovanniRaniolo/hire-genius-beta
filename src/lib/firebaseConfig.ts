@@ -1,14 +1,10 @@
 // src/lib/firebaseConfig.ts
 
 import { initializeApp } from "firebase/app";
-import {
-  getAuth,
-  setPersistence,
-  browserSessionPersistence,
-  GoogleAuthProvider,
-} from "firebase/auth";
+import { getAuth, setPersistence, browserSessionPersistence, GoogleAuthProvider } from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -36,5 +32,6 @@ setPersistence(auth, browserSessionPersistence).catch((error) => {
 
 const googleProvider = new GoogleAuthProvider();
 const db = getFirestore(app);
+const storage = getStorage(app);
 
-export { auth, googleProvider, analytics, db };
+export { auth, googleProvider, analytics, db, storage };
