@@ -57,20 +57,21 @@ const InterviewProcess = () => {
     setInterviewDetails(newInterviewDetails);
 
     const prompt = `
-		  Immagina di essere l'esaminatore ${newInterviewDetails.interviewer.name}. ${newInterviewDetails.interviewer.longBio}.
-		  Devi condurre un colloquio tecnico ${newInterviewDetails.level}. I requisiti del colloquio sono i seguenti: ${newInterviewDetails.interviewRequirements}.
-		  Ponimi ${newInterviewDetails.numQuestions} domande tecniche sul tema "${newInterviewDetails.topic}", di difficoltà crescente.
-		`;
+        Immagina di essere l'esaminatore ${newInterviewDetails.interviewer.name}. ${newInterviewDetails.interviewer.longBio}.
+        Devi condurre un colloquio tecnico ${newInterviewDetails.level}. I requisiti del colloquio sono i seguenti: ${newInterviewDetails.interviewRequirements}.
+        Ponimi ${newInterviewDetails.numQuestions} domande tecniche sul tema "${newInterviewDetails.topic}", di difficoltà crescente.
+    `;
 
-    // Debug del prompt
-    console.log("Prompt sent to API:", prompt);
+    // Aggiungiamo un contesto, se necessario
+    const context = "Contesto aggiuntivo per generare domande pertinenti."; // Puoi modificare questo testo a tuo piacimento
+
     try {
       const response = await fetch("/api/generate-question", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ prompt }),
+        body: JSON.stringify({ prompt, context }), // Inviamo anche il contesto
       });
 
       if (!response.ok) {
@@ -87,7 +88,6 @@ const InterviewProcess = () => {
       console.log("Questions generated successfully", parsedData);
     } catch (e) {
       setIsLoading(false);
-
       console.error("Error generating questions", e);
     }
   };
@@ -98,14 +98,18 @@ const InterviewProcess = () => {
 
     if (interviewDetails && quizResponses) {
       const prompt = `Immagina di essere l'esaminatore ${interviewDetails.interviewer.name}. ${interviewDetails.interviewer.longBio}.
-			Valuta le seguenti risposte fornite durante un colloquio tecnico per una posizione di ${interviewDetails.topic} di livello ${interviewDetails.level}. Per ogni risposta, fornisci:
-			1. Uno status: correct | average | incorrect.
-			2. Una valutazione con breve spiegazione.
-			3. La risposta corretta estremamente sintetica.
-			Alla fine, fornisci una sintetica valutazione globale con un punteggio finale su 100 e una breve frase che riassuma le prestazioni generali del candidato (ad esempio: "Hai superato il test", "Hai dimostrato buone competenze", "Devi migliorare").`;
+          Valuta le seguenti risposte fornite durante un colloquio tecnico per una posizione di ${interviewDetails.topic} di livello ${interviewDetails.level}. Per ogni risposta, fornisci:
+          1. Uno status: correct | average | incorrect.
+          2. Una valutazione con breve spiegazione.
+          3. La risposta corretta estremamente sintetica.
+          Alla fine, fornisci una sintetica valutazione globale con un punteggio finale su 100 e una breve frase che riassuma le prestazioni generali del candidato.`;
+
+      // Qui, dovrai avere l'audioText e il behavioralFeedback disponibili
+      const audioText = "Testo audio convertito qui"; // Ottieni il testo audio
+      const behavioralFeedback = "Feedback comportamentale qui"; // Ottieni il feedback comportamentale
 
       try {
-        const payload = { prompt, quizResponses };
+        const payload = { prompt, quizResponses, audioText, behavioralFeedback }; // Includiamo i nuovi campi
         console.log("Payload inviato:", payload);
 
         const quizResponsesEvaluation = await fetch("/api/evaluate-answer-session", {
