@@ -7,9 +7,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (req.method === "POST") {
     try {
-      const { prompt, quizResponses } = req.body as { prompt: string; quizResponses: QuizResponse[] };
+      const { prompt, quizResponses, audioText, behavioralFeedback } = req.body as {
+        prompt: string;
+        quizResponses: QuizResponse[];
+        audioText: string; // Nuovo campo per il testo audio
+        behavioralFeedback: string; // Nuovo campo per il feedback comportamentale
+      };
 
-      if (!quizResponses || !Array.isArray(quizResponses) || !prompt) {
+      if (!quizResponses || !Array.isArray(quizResponses) || !prompt || !audioText || !behavioralFeedback) {
         return res.status(400).json("Invalid request data.");
       }
 
@@ -55,7 +60,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           },
         });
 
-        const formattedPrompt = `${prompt} ${JSON.stringify(quizResponses)}`;
+        const formattedPrompt = `${prompt} ${JSON.stringify(quizResponses)} ${audioText} ${behavioralFeedback}`; // Aggiunto il testo audio e il feedback
         console.log("Formatted prompt:", formattedPrompt);
 
         const quizResponsesEvaluation = await model.generateContent(formattedPrompt);
