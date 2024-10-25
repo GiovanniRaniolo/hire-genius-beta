@@ -54,6 +54,9 @@ const TopicProcess = () => {
 		  Ponimi ${newInterviewDetails.numQuestions} domande tecniche sul tema "${newInterviewDetails.topic}", di difficoltà crescente.
 		`;
 
+    // Aggiungiamo un contesto, se necessario
+    const context = "Domande a difficoltà crescente sull'argomento scelto dall'utente";
+
     // Debug del prompt
     console.log("Prompt sent to API:", prompt);
     try {
@@ -62,7 +65,7 @@ const TopicProcess = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ prompt }),
+        body: JSON.stringify({ prompt, context }),
       });
 
       if (!response.ok) {
@@ -95,9 +98,12 @@ const TopicProcess = () => {
 			2. Una valutazione con breve spiegazione.
 			3. La risposta corretta estremamente sintetica.
 			Alla fine, fornisci una sintetica valutazione globale con un punteggio finale su 100 e una breve frase che riassuma le prestazioni generali del candidato (ad esempio: "Hai superato il test", "Hai dimostrato buone competenze", "Devi migliorare").`;
+      // Qui, dovrai avere l'audioText e il behavioralFeedback disponibili
+      const audioText = "Testo audio convertito qui"; // Ottieni il testo audio
+      const behavioralFeedback = "Feedback comportamentale qui"; // Ottieni il feedback comportamentale
 
       try {
-        const payload = { prompt, quizResponses };
+        const payload = { prompt, quizResponses, audioText, behavioralFeedback };
         console.log("Payload inviato:", payload);
 
         const quizResponsesEvaluation = await fetch("/api/evaluate-answer-session", {

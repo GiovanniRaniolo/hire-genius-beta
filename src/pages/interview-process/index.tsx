@@ -63,7 +63,7 @@ const InterviewProcess = () => {
     `;
 
     // Aggiungiamo un contesto, se necessario
-    const context = "Contesto aggiuntivo per generare domande pertinenti."; // Puoi modificare questo testo a tuo piacimento
+    const context = "Colloquio Lavorativo Realistico";
 
     try {
       const response = await fetch("/api/generate-question", {
